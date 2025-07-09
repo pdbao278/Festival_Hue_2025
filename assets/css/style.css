@@ -1,0 +1,42 @@
+
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.carousel-container {
+    width: 100vw; 
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    padding: 20px 0; 
+}
+
+.carousel-track {
+    display: flex;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+.carousel-track img {
+    width: var(--image-width);
+    height: var(--image-height);
+    object-fit: cover;
+    margin-right: var(--image-margin);
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+
+.text-wrapper {
+    margin: 0 auto;
+    margin-bottom: 8px;
+    width: 880px;
+    height: auto;
+    text-align: justify;
+}
