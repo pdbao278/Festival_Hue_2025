@@ -1,42 +1,215 @@
-
-body {
+*{
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+
+}
+
+/* Phần địa điem du lịch */
+
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.dia-diem-du-lich {
+    min-height: 100px;
+}
+.map{
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+}
+.list-dia-diem {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+.card-dia-diem {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-anh{
+    position: relative;
+    margin-bottom: 20px;
+    /* border-radius: 20px; */
+    height: 200px;
     overflow: hidden;
+    border: 5px solid #9e8f08;
+}
+.card-anh img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(113, 25, 148, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* css icon  */
+.card-overlay i {
+    color: #fff;
+    font-size: 35px;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(113, 25, 148, 0.8);
+    border-radius: 50%;
+    padding: 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.card-anh:hover .card-overlay {
+    opacity: 1;
+}
+
+/* hiệu ứng icon loction khi hover */
+.card-anh i:hover{
+    color: #fff;
+    transform: scale(1.2);
+    transition: color 0.3s, transform 0.3s;
+    background-color: #ff7757;
+}
+.card-tieude {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* điều khiển list địa điểm */
+.control-list{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #fff;
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
 }
 
-.carousel-container {
-    width: 100vw; 
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-    border-radius: 8px;
-    padding: 20px 0; 
+.control-list i {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s, transform 0.3s;
+    padding: 4px;
+    cursor: pointer;
 }
 
-.carousel-track {
-    display: flex;
-    white-space: nowrap;
-    will-change: transform;
+.control-list i:hover {
+    color: #ff7757;
+    transform: scale(1.2);
 }
 
-.carousel-track img {
-    width: var(--image-width);
-    height: var(--image-height);
+.control-list i.disabled,
+.control-list i.disabled:hover {
+    opacity: 0.4;
+    filter: grayscale(1) brightness(1.8);
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Phần footer */
+
+footer {
+    background-color:#EFECEC;
+    width: 100%;
+}
+
+.logo-and-social {
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: 120px auto 120px;
+}
+.fot-logo{
+    width: 100%;
+    height: 120px;
     object-fit: cover;
-    margin-right: var(--image-margin);
-    flex-shrink: 0;
-    border-radius: 8px;
+}
+.fot-logo:first-child {
+    padding: 17px;
 }
 
-.text-wrapper {
-    margin: 0 auto;
-    margin-bottom: 8px;
-    width: 880px;
-    height: auto;
-    text-align: justify;
+.list-social {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    gap: 10px;
 }
+.list-social i{
+    font-size: 25px;
+    color: #3d3a3a;
+}
+
+.list-social i:hover {
+    color: #ff7757;
+    transform: scale(1.2);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.fot-mid{
+    min-height: 200px;
+    border-bottom: 3px solid #242423;
+}
+.fot-mid i{
+    font-size: 18px;
+}
+
+.fot-info h2 , .fot-info h4{
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+.fot-info div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.fot-info p{
+    margin-left: 5px;
+}
+
+.fot-bottom{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
