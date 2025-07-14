@@ -163,7 +163,7 @@
 }
 
 .bg-red-corners {
-    background-image: url(.../assets/img/Button/bg-red-tl.jpg), url(.../assets/img/Button/bg-red-tr.jpg), url(.../assets/img/Button/bg-red-br.jpg), url(.../assets/img/Button/bg-red-bl.jpg);
+    background-image: url(../img/Button/bg-red-tl.jpg), url(../img/Button/bg-red-tr.jpg), url(../img/Button/bg-red-br.jpg), url(../img/Button/bg-red-bl.jpg);
     background-repeat: no-repeat;
     background-position: 0 0, 100% 0, 100% 100%, 0 100%;
     background-color: #a5190e;
