@@ -1,42 +1,292 @@
-
-body {
-    margin: 0;
-    overflow: hidden;
+.menu {
+    position: relative;
+    background-color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #fff;
+    padding: 20px 40px;
+    overflow: hidden;
+    z-index: 0;
+    height: 80px;
+}
+.menu a:first-of-type {
+    margin-left: 100px;
 }
 
-.carousel-container {
-    width: 100vw; 
-    max-width: 100%;
+.menu a:first-of-type {
+    color: green;
+}
+
+.menu a {
+    font-family: "Mali", sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    margin-right: 30px;
+    font-size: 20px;
+}
+.menu a:hover {
+    color: red;
+}
+.logo {
+    height: 100px;
+    width: 100px;
+}
+.logo-left,.logo-right{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+}
+.logo-left{
+    left: 0;
+    margin-left: -100px;
+    width: 800px;
+    height: auto;
+}
+.logo-right{
+    right: 0;
+    width: 300px;
+}
+.banner{
+    width: 100%;
+    height: 600px;
+    background-image: url("../img/Banner/huetourism-cong-bo-poster-chinh-thuc-nam-du-lich-quoc-gia-hue-2025-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.title{
+    color: #B2910E;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+}
+.line{
+    width: 80%;
+    height: 1px;
+    background-color: black;
+    margin: 20px auto;
+}
+.introduction .content{
+    width: 76%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: "Inter", sans-serif;
+    line-height: 30px;
+    opacity: 0.75;
+}
+.intro-img-wrapper {
+    width: 100%;
     overflow: hidden;
     position: relative;
-    border-radius: 8px;
-    padding: 20px 0; 
+    height: 300px;
 }
 
-.carousel-track {
+.intro-img-slide {
     display: flex;
-    white-space: nowrap;
-    will-change: transform;
+    animation: moveLeft 20s linear infinite;
 }
 
-.carousel-track img {
-    width: var(--image-width);
-    height: var(--image-height);
-    object-fit: cover;
-    margin-right: var(--image-margin);
+.intro-img-slide img {
+    height: 300px;
+    margin-right: 20px;
     flex-shrink: 0;
-    border-radius: 8px;
 }
 
-.text-wrapper {
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.event-schedule {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+}
+.bg-only {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/Background/bg-lich-trinh.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.event-body {
+    display: flex;
+    margin: 50px auto;
+    padding-left: 100px;
+    z-index: 2;
+    position: relative;
+    font-family: "Inter", sans-serif;
+}
+
+.timeline-item {
+    border: 1px solid #c09508;
+    padding: 15px;
+    border-radius: 10px;
+    height: 50px;
+    width: 220px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+.timeline-item h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 0 ;
+}
+.timeline-item p {
+    color: black;
+    font-size: 14px;
+}
+.timeline-item:first-of-type  {
+    background-color: #a40000;
+    color: #fff;
+    border: none;
+    position: relative;
+}
+.event-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-detail h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.event-detail p {
+    margin: 2px 0;
+    color: #444;
+}
+.color-buttons {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    right: 100px;
+}
+
+.color-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.color-circle:hover {
+    transform: scale(1.1);
+}
+
+.yellow { background-color: #f2bd00; }
+.red    { background-color: #b52320; }
+.blue   { background-color: #4362d0; }
+.black  { background-color: #1e1e1e; }
+
+.traditional-village {
     margin: 0 auto;
-    margin-bottom: 8px;
-    width: 880px;
-    height: auto;
+    padding: 50px 20px;
+}
+
+
+/* ===== Layout item ===== */
+.village-item,
+.village-item-reverse {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.village-item-reverse {
+    flex-direction: row-reverse;
+}
+
+.village-content {
+    flex: 1;
+    min-width: 300px;
+    font-family: "Inter", sans-serif;
+}
+
+/* Tiêu đề làng */
+.village-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #222;
+    text-align: center;
+}
+
+/* Mô tả */
+.village-info {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
     text-align: justify;
 }
+
+/* Ảnh */
+.village-img {
+    flex: 1;
+    min-width: 300px;
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+/* Nút Xem thêm */
+.more-info {
+    background-color: #a40000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.more-info::before {
+    content: "";
+    position: absolute;
+    border: 2px solid gold;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 5px;
+    pointer-events: none;
+}
+.village-img:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+
