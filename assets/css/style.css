@@ -40,16 +40,23 @@
 }
 .map-title .control-info {
     border: none;
-    font-size: 20px;
+    font-size: 14px;
     cursor: pointer;
-    padding: 4px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    right: 0px;
-    top: 0px;
-    color: red;
-    border: 1px solid #ff7757;
-    background-color: #d1d4cc;
+    right: -25px;
+    top: -10px;
+    /* background-color: #7c4545; */
+    border: 2px solid red;
+    padding: 0;
+    border-radius: 50%;
+    color:red;
 }
+
 
 .map-title .control-info:hover {
     color: #fff;
