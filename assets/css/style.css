@@ -1,0 +1,187 @@
+
+.carousel-container {
+    width: 100vw; 
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    padding: 20px 0; 
+}
+
+.carousel-track {
+    display: flex;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+.carousel-track img {
+    width: var(--image-width);
+    height: var(--image-height);
+    object-fit: cover;
+    margin-right: var(--image-margin);
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+
+.text-wrapper {
+    margin: 0 auto;
+    margin-bottom: 8px;
+    width: 880px;
+    height: auto;
+    text-align: justify;
+}
+
+.section-2, .section-food {
+    margin: 0 auto;
+}
+
+.section-food {
+    width: 1280px;
+}
+
+.food-flex {
+    display: flex;
+    align-items: center;
+}
+
+.box-f {
+    width: 452px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-f {
+    font-size: 72px;
+    font-weight: bolder;
+}
+
+.food-info {
+    width: 480px;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.food-grids {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.actives {
+    margin-top: 24px;
+}
+
+.food-card {
+    display: none;
+}
+
+.food-card.active {
+    display: block;
+}
+
+.food-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.food-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.ribbon {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: #F163FF;
+    color: white;
+    border-radius: 16px;
+    padding: 4px 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.food-infor {
+    position: absolute;
+    margin: 12px;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #F3F3F3;
+    padding: 8px 8px 8px 20px;
+    border-radius: 0px 20px 0px 0px;
+    opacity: 90%;
+}
+
+.food-infor h3 {
+    color: #A5190E;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.food-infor span {
+    background-color: #FBD3FF;
+    color: #6d0ad0;
+    padding: 2px 8px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 16px;
+}
+
+.btn {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-more {
+    width: auto;
+    display: inline-block;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 50px;
+    min-width: 150px;
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.bg-red-corners {
+    background-image: url(/assets/img/Button/bg-red-tl.jpg), url(/assets/img/Button/bg-red-tr.jpg), url(/assets/img/Button/bg-red-br.jpg), url(/assets/img/Button/bg-red-bl.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-color: #a5190e;
+    border-radius: 5px;
+    position: relative;
+}
+
+.bg-red-corners::after {
+    border: 1px solid #f7bd01;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+}
+
+.btn-more:hover {
+    box-shadow: 0 2px 12px rgb(0 0 0 / .8);
+}
