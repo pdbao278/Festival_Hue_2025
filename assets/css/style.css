@@ -1,4 +1,3 @@
-
 .carousel-container {
     width: 100vw; 
     max-width: 100%;
@@ -39,10 +38,37 @@
     width: 100%;
 }
 
+.section-food {
+    position: relative;
+    padding-top: 30px;
+    background-image: url(../../assets/img/Background/bg-food.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}   
+
+.section-food::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+.section-food > .container {
+    position: relative;
+    z-index: 2;
+}
+
 .food-flex {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.food-flex, .foods {
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .box-f {
@@ -65,7 +91,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    background-color: #fff;
     border-radius: 8px;
 }
 
@@ -73,12 +98,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    background-color: #fff;
     border-radius: 8px;
 }
 
 .actives {
-    margin-top: 24px;
+    margin: 24px;
+    margin-bottom: 0px;
 }
 
 .food-card {
