@@ -36,12 +36,13 @@
 }
 
 .section-food {
-    width: 1280px;
+    width: 100%;
 }
 
 .food-flex {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .box-f {
