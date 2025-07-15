@@ -30,12 +30,12 @@
     position: absolute;
     top: 140px;
     left: 65px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(48, 46, 46);
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.4);
     width: 250px;
-    height: 300px;
+    height: 350px;
     padding: 8px;
 }
 .map-title .control-info {
@@ -49,7 +49,7 @@
     justify-content: center;
     position: absolute;
     right: -25px;
-    top: -10px;
+    top: -10px !important;
     /* background-color: #7c4545; */
     border: 2px solid red;
     padding: 0;
@@ -65,18 +65,25 @@
 }
 .map-title h2 {
     font-size: 20px;
-    color: #333;
+    color: #c2c03d;
     margin-bottom: 10px;
     padding-bottom: 5px;
     text-align: center;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ffffff;
 }
 
 .map-info p {
     font-size: 16px;
-    color: #555;
+    color: #e9e1e1;
     margin-bottom: 10px;
     text-align: justify;
+}
+
+.map-info h4 {
+    font-size: 14px;
+    color: #22d81b;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .list-control-map{
@@ -331,13 +338,11 @@ footer {
     width: 100%;
     min-width: unset;
     margin-bottom: 16px;
-    height: 320px;
+    height: 500px;
   }
   .map-info {
-    max-width: 100%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    width: 35%;
+    left: 60px;
   }
   .list-dia-diem {
     grid-template-columns: repeat(2, 1fr);
@@ -352,7 +357,7 @@ footer {
 
 @media (max-width: 600px) {
   .list-control-map {
-    top: 50px;
+    top: 150px;
   }
   .container {
     padding: 2px;
@@ -361,15 +366,17 @@ footer {
     padding: 0 2px;
   }
   .map {
-    height: 450px;
+    height: 500px;
   }
   .map-info {
     font-size: 13px;
     padding: 10px;
-    max-width: 100vw;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    width: 35%;
+    left: 60px;
+
+  }
+  .map-info p {
+    font-size: 13px;
   }
   .map-title h2 {
     font-size: 16px;
@@ -403,7 +410,7 @@ footer {
     font-size: 13px;
   }
   .fot-info p {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -411,6 +418,8 @@ footer {
   .map-info {
     font-size: 11px;
     padding: 6px;
+    width: 60%;
+    height: 60%;
   }
   .map-title h2 {
     font-size: 13px;
@@ -418,9 +427,7 @@ footer {
   .fot-logo {
     width: 40px;
   }
-  .fot-logo:first-child {
-    padding: 0px !important;
-  }
+ 
 }
 /* =============== End Responsive Design =============== */
 
