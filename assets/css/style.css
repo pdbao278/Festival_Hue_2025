@@ -133,7 +133,7 @@
 }
 .card-anh img{
     width: 100%;
-    height: 100%;
+    height: 100% !important;
     object-fit: cover;
 }
 
@@ -238,13 +238,14 @@ footer {
     grid-template-columns: 120px auto 120px;
 }
 .fot-logo{
-    width: 100%;
+    width: 120px;
     height: 120px;
     object-fit: cover;
+    padding: 10px;
 }
-.fot-logo:first-child {
-    padding: 17px;
-}
+/* .fot-logo:first-child {
+    padding: 17px ;
+} */
 
 .list-social {
     height: 60px;
@@ -297,4 +298,235 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+/* ================= Responsive Design ================ */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+  .list-dia-diem {
+    gap: 12px;
+  }
+  .map-info {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  .logo-and-social {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 10px;
+  }
+  .fot-logo {
+    height: 80px;
+    padding: 8px 0;
+  }
+  .dia-diem-du-lich {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 8px;
+  }
+  .map {
+    width: 100%;
+    min-width: unset;
+    margin-bottom: 16px;
+    height: 320px;
+  }
+  .map-info {
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .list-dia-diem {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 4px;
+  }
+  .card-dia-diem {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .list-control-map {
+    top: 50px;
+  }
+  .container {
+    padding: 2px;
+  }
+  .dia-diem-du-lich {
+    padding: 0 2px;
+  }
+  .map {
+    height: 450px;
+  }
+  .map-info {
+    font-size: 13px;
+    padding: 10px;
+    max-width: 100vw;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .map-title h2 {
+    font-size: 16px;
+  }
+  .list-dia-diem {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 0;
+  }
+  .card-dia-diem {
+    min-width: 0;
+    width: 100%;
+    font-size: 13px;
+  }
+  .card-anh img {
+    height: 120px;
+    object-fit: cover;
+  }
+  .control-list {
+    font-size: 20px;
+    gap: 10px;
+  }
+  .fot-logo {
+    width: 60px;
+    height: auto;
+  }
+  .fot-info h2 {
+    font-size: 15px;
+  }
+  .fot-info h4 {
+    font-size: 13px;
+  }
+  .fot-info p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .map-info {
+    font-size: 11px;
+    padding: 6px;
+  }
+  .map-title h2 {
+    font-size: 13px;
+  }
+  .fot-logo {
+    width: 40px;
+  }
+  .fot-logo:first-child {
+    padding: 0px !important;
+  }
+}
+/* =============== End Responsive Design =============== */
+
+/* ===== Responsive Footer Fix ===== */
+@media (max-width: 900px) {
+  .logo-and-social {
+    display: grid;
+    grid-template-columns: 70px 1fr 70px;
+    grid-template-areas:
+      "logo1 mid logo2"
+      ". mid .";
+    text-align: center;
+    gap: 10px;
+    padding: 10px 0;
+    align-items: start;
+  }
+  .fot-logo:first-child {
+    grid-area: logo1;
+    padding: 0;
+  }
+  .fot-logo:last-child {
+    grid-area: logo2;
+  }
+  .fot-mid {
+    grid-area: mid;
+    border-bottom: 2px solid #242423;
+    min-height: unset;
+    padding: 10px 0;
+  }
+  .fot-logo {
+    height: 70px;
+    width: 70px;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+  }
+  .fot-logo:first-child {
+    padding: 0;
+  }
+  .fot-mid {
+    border-bottom: 2px solid #242423;
+    min-height: unset;
+    padding: 10px 0;
+  }
+  .fot-info h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .fot-info h4 {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .fot-info div {
+    margin-bottom: 6px;
+  }
+  .fot-info p {
+    font-size: 12px;
+    margin-left: 4px;
+  }
+  .list-social {
+    height: 40px;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+  .list-social i {
+    font-size: 20px;
+  }
+  .fot-bottom {
+    font-size: 12px;
+    height: auto;
+    padding: 8px 0;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .logo-and-social {
+    grid-template-columns: 45px 1fr 45px;
+    grid-template-areas:
+      "logo1 mid logo2"
+      ". mid .";
+    align-items: start;
+    padding: 6px 0;
+  }
+  .logo-and-social {
+    padding: 6px 0;
+  }
+  .fot-logo {
+    height: 45px;
+    width: 45px;
+  }
+  .fot-info h2 {
+    font-size: 13px;
+  }
+  .fot-info h4 {
+    font-size: 11px;
+  }
+  .fot-info p {
+    font-size: 10px;
+  }
+  .fot-bottom {
+    font-size: 10px;
+    padding: 4px 0;
+  }
+  .list-social i {
+    font-size: 16px;
+  }
+}
+/* ===== End Responsive Footer Fix ===== */
 

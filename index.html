@@ -115,7 +115,7 @@
                     <img src="./assets/img/Du-lich/cau-Trang-Tien.jpg" alt="">
                 </div>
                 <div class="card-tieude">
-                    Cầu Tràng Tiền
+                    Cầu Trường Tiền
                 </div>
             </li>
             <li class="card-dia-diem"
@@ -163,7 +163,7 @@
                     </div>
                 </div>
             </div>
-            <img src="./assets/img/Logo/logo-2.png" alt="" class="fot-logo">
+            <img src="./assets/img/Logo/result_logo-2.png" alt="" class="fot-logo">
         </div>
         <div class="fot-bottom">
             <p>© 2025 TRUNG TÂM BẢO TỒN DI TÍCH CỐ ĐÔ HUẾ - Số giấy phép: 233/GP - BTTTT cấp ngày 16/5/2008.</p>
@@ -236,8 +236,8 @@
                     Đồi có độ cao khoảng 200m so với mực nước biển, từ đỉnh đồi có thể nhìn thấy toàn cảnh thành phố Huế và dòng sông Hương thơ mộng.
                     Đồi Thiên An còn được biết đến với những cánh rừng thông xanh mướt, tạo nên khung cảnh thơ mộng và yên bình.`
         }, {
-            title: 'Cầu Tràng Tiền',
-            content: `Cầu Tràng Tiền là cây cầu nổi tiếng nhất ở Huế, bắc qua sông Hương.
+            title: 'Cầu Trường Tiền',
+            content: `Cầu Trường Tiền là cây cầu nổi tiếng nhất ở Huế, bắc qua sông Hương.
                     Cầu được xây dựng vào năm 1899 và hoàn thành vào năm 1904, là biểu tượng của thành phố Huế.
                     Cầu có kiến trúc độc đáo với 6 nhịp, mỗi nhịp dài 68m, tạo nên khung cảnh thơ mộng và lãng mạn.`
         }, {
@@ -261,12 +261,31 @@
 
         // Quản lý hiển thị danh sách địa điểm
         // Hiển thị 5 địa điểm mỗi lần
-        const itemsPerPage = 5;
+
+        let itemsPerPage = 5;
         let startIndex = 0;
         const list = document.querySelectorAll('.card-dia-diem');
         const leftBtn = document.querySelector('.fa-caret-left');
         const rightBtn = document.querySelector('.fa-caret-right');
-        const maxIndex = list.length - itemsPerPage;
+        let maxIndex = list.length - itemsPerPage;
+
+        function updateItemsPerPage() {
+            const width = window.innerWidth;
+            if (width <= 600) {
+                itemsPerPage = 1;
+            } else if (width <= 900) {
+                itemsPerPage = 2;
+            } else {
+                itemsPerPage = 5;
+            }
+            maxIndex = list.length - itemsPerPage;
+            if (startIndex > maxIndex) startIndex = Math.max(0, maxIndex);
+            showWindow(startIndex);
+        }
+
+        window.addEventListener('resize', updateItemsPerPage);
+        // Gọi 1 lần khi load
+        updateItemsPerPage();
 
         function updateBtnState() {
             if (startIndex <= 0) {
@@ -274,7 +293,7 @@
             } else {
                 leftBtn.classList.remove('disabled');
             }
-            if (startIndex >= maxIndex) {
+            if (startIndex >= maxIndex || list.length <= itemsPerPage) {
                 rightBtn.classList.add('disabled');
             } else {
                 rightBtn.classList.remove('disabled');
@@ -292,6 +311,7 @@
             updateBtnState();
         }
 
+
         leftBtn.onclick = function () {
             if (startIndex > 0) {
                 startIndex--;
@@ -305,7 +325,7 @@
             }
         };
 
-        showWindow(startIndex);
+        // showWindow(startIndex); // Đã gọi trong updateItemsPerPage
 
         // Tự động chuyển trang sang phải sau mỗi 4 giây, dừng khi hover card
         let autoSlide = null;
