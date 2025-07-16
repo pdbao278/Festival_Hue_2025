@@ -305,9 +305,11 @@ footer {
   padding-top: 0px !important;
 }
 .fot-info p{
-    margin-left: 5px;
     text-align: center;
+}
 
+.fot-info i{
+    margin-right: 6px;
 }
 
 .fot-bottom{
