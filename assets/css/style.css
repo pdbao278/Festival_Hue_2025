@@ -296,7 +296,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+    margin: 0px 10px 10px 10px !important;
 }
 .fot-info{
   border-bottom: 3px solid #242423;
