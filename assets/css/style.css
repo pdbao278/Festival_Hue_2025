@@ -311,6 +311,24 @@ footer {
 .fot-info i{
     margin-right: 6px;
 }
+/* Đảm bảo icon luôn nằm đầu dòng khi p xuống hàng */
+.fot-info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
+    justify-content: center;
+}
+.fot-info-row i {
+    flex-shrink: 0;
+    font-size: 18px;
+    margin-top: 2px;
+}
+.fot-info-row p, .fot-info-row span {
+    margin: 0;
+    line-height: 1.6;
+    word-break: break-word;
+}
 
 .fot-bottom{
     height: 40px;
@@ -322,6 +340,8 @@ footer {
     padding: 0 20px;
     text-align: center;
 }
+
+
 
 /* ================= Responsive Design (Gộp lại) ================ */
 @media (max-width: 1200px) {
