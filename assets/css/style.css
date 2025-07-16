@@ -85,7 +85,9 @@
     margin-bottom: 5px;
     text-align: center;
 }
-
+.map-content p{
+  overflow: auto;
+}
 .list-control-map{
     position: absolute;
     top: 150px;
@@ -282,7 +284,7 @@ footer {
     font-size: 18px;
 }
 
-.fot-info h2 , .fot-info h4{
+.fot-info h2 , .fot-info h3{
     color: #333;
     text-align: center;
     margin-bottom: 15px;
@@ -306,17 +308,11 @@ footer {
     justify-content: center;
 }
 
-/* ================= Responsive Design ================ */
+/* ================= Responsive Design (Gộp lại) ================ */
 @media (max-width: 1200px) {
-  .container {
-    max-width: 1000px;
-  }
-  .list-dia-diem {
-    gap: 12px;
-  }
-  .map-info {
-    max-width: 400px;
-  }
+  .container { max-width: 1000px; }
+  .list-dia-diem { gap: 12px; }
+  .map-info { max-width: 400px; }
 }
 
 @media (max-width: 900px) {
@@ -324,10 +320,27 @@ footer {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 10px;
+    display: grid;
+    grid-template-columns: 70px 1fr 70px;
+    grid-template-areas:
+      "logo1 mid logo2"
+      ". mid .";
+    padding: 10px 0;
+    align-items: start;
   }
   .fot-logo {
     height: 80px;
     padding: 8px 0;
+    width: 70px;
+    margin: 0 auto;
+    display: block;
+  }
+  .fot-logo:first-child {
+    grid-area: logo1;
+    padding: 0;
+  }
+  .fot-logo:last-child {
+    grid-area: logo2;
   }
   .dia-diem-du-lich {
     flex-direction: column;
@@ -344,6 +357,7 @@ footer {
     width: 35%;
     left: 60px;
   }
+  .map-info p { font-size: 13px; }
   .list-dia-diem {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -353,33 +367,37 @@ footer {
     min-width: 0;
     width: 100%;
   }
+  .fot-mid {
+    grid-area: mid;
+    border-bottom: 2px solid #242423;
+    min-height: unset;
+    padding: 10px 0;
+  }
+  .fot-info h2 { font-size: 16px; margin-bottom: 8px; }
+  .fot-info h4 { font-size: 13px; margin-bottom: 8px; }
+  .fot-info div { margin-bottom: 6px; }
+  .fot-info p { font-size: 12px; margin-left: 4px; }
+  .list-social { height: 40px; gap: 6px; margin-bottom: 8px; }
+  .list-social i { font-size: 20px; }
+  .fot-bottom { font-size: 12px; height: auto; padding: 8px 0; text-align: center; }
 }
 
 @media (max-width: 600px) {
-  .list-control-map {
-    top: 150px;
-  }
-  .container {
-    padding: 2px;
-  }
-  .dia-diem-du-lich {
-    padding: 0 2px;
-  }
-  .map {
-    height: 500px;
-  }
+  .list-control-map { top: 150px; }
+  .container { padding: 2px; }
+  .dia-diem-du-lich { padding: 0 2px; }
+  .map { height: 500px; }
   .map-info {
     font-size: 13px;
     padding: 10px;
-    width: 35%;
+    width: 40%;
     left: 60px;
-
   }
-  .map-info p {
-    font-size: 13px;
-  }
-  .map-title h2 {
-    font-size: 16px;
+  .map-info p { font-size: 12px; }
+  .map-title h2 { font-size: 16px; }
+  .map-info h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
   }
   .list-dia-diem {
     grid-template-columns: 1fr;
@@ -391,118 +409,12 @@ footer {
     width: 100%;
     font-size: 13px;
   }
-  .card-anh img {
-    height: 120px;
-    object-fit: cover;
-  }
-  .control-list {
-    font-size: 20px;
-    gap: 10px;
-  }
-  .fot-logo {
-    width: 60px;
-    height: auto;
-  }
-  .fot-info h2 {
-    font-size: 15px;
-  }
-  .fot-info h4 {
-    font-size: 13px;
-  }
-  .fot-info p {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 400px) {
-  .map-info {
-    font-size: 11px;
-    padding: 6px;
-    width: 60%;
-    height: 60%;
-  }
-  .map-title h2 {
-    font-size: 13px;
-  }
-  .fot-logo {
-    width: 40px;
-  }
- 
-}
-/* =============== End Responsive Design =============== */
-
-/* ===== Responsive Footer Fix ===== */
-@media (max-width: 900px) {
-  .logo-and-social {
-    display: grid;
-    grid-template-columns: 70px 1fr 70px;
-    grid-template-areas:
-      "logo1 mid logo2"
-      ". mid .";
-    text-align: center;
-    gap: 10px;
-    padding: 10px 0;
-    align-items: start;
-  }
-  .fot-logo:first-child {
-    grid-area: logo1;
-    padding: 0;
-  }
-  .fot-logo:last-child {
-    grid-area: logo2;
-  }
-  .fot-mid {
-    grid-area: mid;
-    border-bottom: 2px solid #242423;
-    min-height: unset;
-    padding: 10px 0;
-  }
-  .fot-logo {
-    height: 70px;
-    width: 70px;
-    margin: 0 auto;
-    padding: 0;
-    display: block;
-  }
-  .fot-logo:first-child {
-    padding: 0;
-  }
-  .fot-mid {
-    border-bottom: 2px solid #242423;
-    min-height: unset;
-    padding: 10px 0;
-  }
-  .fot-info h2 {
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-  .fot-info h4 {
-    font-size: 13px;
-    margin-bottom: 8px;
-  }
-  .fot-info div {
-    margin-bottom: 6px;
-  }
-  .fot-info p {
-    font-size: 12px;
-    margin-left: 4px;
-  }
-  .list-social {
-    height: 40px;
-    gap: 6px;
-    margin-bottom: 8px;
-  }
-  .list-social i {
-    font-size: 20px;
-  }
-  .fot-bottom {
-    font-size: 12px;
-    height: auto;
-    padding: 8px 0;
-    text-align: center;
-  }
-}
-@media (max-width: 600px) {
+  .card-anh img { height: 120px; object-fit: cover; }
+  .control-list { font-size: 20px; gap: 10px; }
+  .fot-logo { width: 60px; height: auto; }
+  .fot-info h2 { font-size: 16px; }
+  .fot-info h3 { font-size: 13px; }
+  .fot-info p { font-size: 13px; }
   .logo-and-social {
     grid-template-columns: 45px 1fr 45px;
     grid-template-areas:
@@ -511,29 +423,27 @@ footer {
     align-items: start;
     padding: 6px 0;
   }
-  .logo-and-social {
-    padding: 6px 0;
-  }
-  .fot-logo {
-    height: 45px;
-    width: 45px;
-  }
-  .fot-info h2 {
-    font-size: 13px;
-  }
-  .fot-info h4 {
-    font-size: 11px;
-  }
-  .fot-info p {
-    font-size: 10px;
-  }
-  .fot-bottom {
-    font-size: 10px;
-    padding: 4px 0;
-  }
-  .list-social i {
-    font-size: 16px;
-  }
+  .fot-logo { height: 45px; width: 45px; }
+  .fot-info h2 { font-size: 13px; }
+  .fot-info h4 { font-size: 11px; }
+  .fot-bottom { font-size: 10px; padding: 4px 0; }
+  .list-social i { font-size: 16px; }
+  .fot-mid i { font-size: 14px; }
 }
-/* ===== End Responsive Footer Fix ===== */
+
+@media (max-width: 400px) {
+  .map-info {
+    font-size: 11px;
+    padding: 6px;
+    width: 55%;
+    height: 60%;
+  }
+  .map-title h2 { font-size: 13px; }
+  .fot-logo { width: 40px; }
+  .fot-info h2 { font-size: 14px; }
+  .fot-info h3 { font-size: 12px; }
+  .fot-info p { font-size: 10px; }
+  .fot-mid i { font-size: 8px; }
+}
+/* =============== End Responsive Design (Gộp lại) =============== */
 
