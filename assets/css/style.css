@@ -85,8 +85,9 @@
     margin-bottom: 5px;
     text-align: center;
 }
-.map-content p{
+.map-content {
   overflow: auto;
+  height: 290px;
 }
 .list-control-map{
     position: absolute;
@@ -127,7 +128,6 @@
 }
 .card-dia-diem {
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -244,17 +244,18 @@ footer {
 .logo-and-social {
     min-height: 100px;
     display: grid;
-    grid-template-columns: 120px auto 120px;
+    grid-template-columns: 110px auto 110px;
+    padding: 10px !important;
+    gap: 10px;
 }
 .fot-logo{
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     object-fit: cover;
-    padding: 10px;
+    align-items: center;
+
 }
-/* .fot-logo:first-child {
-    padding: 17px ;
-} */
+
 
 .list-social {
     height: 60px;
@@ -279,6 +280,7 @@ footer {
 .fot-mid{
     min-height: 200px;
     border-bottom: 3px solid #242423;
+
 }
 .fot-mid i{
     font-size: 18px;
@@ -307,12 +309,17 @@ footer {
     align-items: center;
     justify-content: center;
 }
+.fot-bottom p{
+    padding: 0 20px;
+    text-align: center;
+}
 
 /* ================= Responsive Design (Gộp lại) ================ */
 @media (max-width: 1200px) {
   .container { max-width: 1000px; }
   .list-dia-diem { gap: 12px; }
   .map-info { max-width: 400px; }
+
 }
 
 @media (max-width: 900px) {
@@ -326,7 +333,7 @@ footer {
       "logo1 mid logo2"
       ". mid .";
     padding: 10px 0;
-    align-items: start;
+    align-items: center;
   }
   .fot-logo {
     height: 80px;
@@ -436,6 +443,9 @@ footer {
     font-size: 11px;
     padding: 6px;
     width: 55%;
+    height: 60%;
+  }
+  .map-content {
     height: 60%;
   }
   .map-title h2 { font-size: 13px; }
