@@ -268,7 +268,7 @@ footer {
     gap: 10px;
 }
 .list-social i{
-    font-size: 25px;
+    font-size: 28px;
     color: #3d3a3a;
 }
 
@@ -294,9 +294,10 @@ footer {
 
 .fot-info div{
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: center;
-    margin: 0px 10px 10px 10px !important;
+    margin-bottom:10px !important;
+    padding: 0px 10px 0px 10px !important;
 }
 .fot-info{
   border-bottom: 3px solid #242423;
@@ -304,6 +305,7 @@ footer {
 }
 .fot-info p{
     margin-left: 5px;
+    text-align: center;
 
 }
 
@@ -381,10 +383,11 @@ footer {
     min-height: unset;
     padding: 10px 0;
   } */
-  .fot-info h2 { font-size: 16px; margin-bottom: 8px; }
-  .fot-info h3 { font-size: 13px; margin-bottom: 8px; }
+  .fot-info h2 { font-size: 17px; margin-bottom: 8px; }
+  .fot-info h3 { font-size: 15px; margin-bottom: 8px; }
   .fot-info div { margin-bottom: 6px; }
-  .fot-info p { font-size: 12px; margin-left: 4px; }
+  .fot-info p { font-size: 13px; margin-left: 4px; }
+  .fot-info i { font-size: 13px;}
   .list-social { height: 40px; gap: 6px; margin-bottom: 8px; }
   .list-social i { font-size: 20px; }
   .fot-bottom { font-size: 12px; height: auto; padding: 8px 0; text-align: center; }
@@ -398,7 +401,7 @@ footer {
   .map-info {
     font-size: 13px;
     padding: 10px;
-    width: 40%;
+    width: 42%;
     left: 60px;
   }
   .map-info p { font-size: 12px; }
@@ -407,15 +410,20 @@ footer {
     font-size: 14px;
     margin-bottom: 8px;
   }
+  .map-content h4 {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
   .list-dia-diem {
     grid-template-columns: 1fr;
-    gap: 8px;
     padding: 0;
   }
   .card-dia-diem {
-    min-width: 0;
+    min-width: 260px;
+    max-width: 260px;
     width: 100%;
     font-size: 13px;
+    margin: 0 auto;
   }
   .card-anh img { height: 120px; object-fit: cover; }
   .control-list { font-size: 20px; gap: 10px; }
@@ -423,6 +431,7 @@ footer {
   .fot-info h2 { font-size: 16px; }
   .fot-info h3 { font-size: 13px; }
   .fot-info p { font-size: 13px; }
+  .fot-info i { font-size: 13px;}
   .logo-and-social {
     grid-template-columns: 50px 1fr 50px;
     grid-template-areas:
@@ -454,7 +463,9 @@ footer {
   .fot-info h2 { font-size: 14px; }
   .fot-info h3 { font-size: 12px; }
   .fot-info p { font-size: 10px; }
-  .fot-mid i { font-size: 8px; }
+  .fot-mid i { font-size: 15px; }
+  .fot-info i { font-size: 12px;}
+  .fot-bottom p{ font-size: 10px; }
 }
 /* =============== End Responsive Design (Gộp lại) =============== */
 
