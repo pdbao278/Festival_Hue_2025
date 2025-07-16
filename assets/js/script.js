@@ -23,6 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
     animateScroll();
 });
 
+window.addEventListener('load', () => {
+    const carouselTrack = document.querySelector('.carousel-tracks');
+    const totalWidth = carouselTrack.scrollWidth;
+    let currentPosition = 0;
+    const speed = 1;
+    function animateScroll() {
+        currentPosition -= speed;
+        if (currentPosition <= -totalWidth / 2) {
+            currentPosition = 0;
+        }
+        carouselTrack.style.transform = `translateX(${currentPosition}px)`;
+        requestAnimationFrame(animateScroll);
+    }
+    animateScroll();
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const seeMoreButton = document.querySelector('.btn-more');
     const foodGrids = document.querySelectorAll('.food-grids');

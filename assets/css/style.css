@@ -1,10 +1,10 @@
 .carousel-container {
-    width: 100vw; 
+    width: 100vw;
     max-width: 100%;
     overflow: hidden;
     position: relative;
     border-radius: 8px;
-    padding: 20px 0; 
+    padding: 20px 0;
 }
 
 .carousel-track {
@@ -30,19 +30,21 @@
     text-align: justify;
 }
 
-.section-2, .section-food {
+.section-2,
+.section-food,
+.section-art {
+    width: 100%;
     margin: 0 auto;
+    padding: 24px 0px;
 }
 
 .section-food {
-    width: 100%;
     position: relative;
-    padding: 24px 0px;
     background-image: url(../img/Background/bg-food.jpg);
     background-size: cover;
     background-position: center;
     z-index: 0;
-}   
+}
 
 .section-food::before {
     content: "";
@@ -52,7 +54,7 @@
     z-index: 1;
 }
 
-.section-food > .container {
+.section-food>.container {
     position: relative;
     z-index: 2;
 }
@@ -63,7 +65,8 @@
     justify-content: center;
 }
 
-.food-flex, .foods {
+.food-flex,
+.foods {
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -187,10 +190,10 @@
 }
 
 .bg-red-corners {
-    background-image: url(../img/Button/bg-red-tl.jpg), 
-                  url(../img/Button/bg-red-tr.jpg), 
-                  url(../img/Button/bg-red-br.jpg), 
-                  url(../img/Button/bg-red-bl.jpg);    
+    background-image: url(../img/Button/bg-red-tl.jpg),
+        url(../img/Button/bg-red-tr.jpg),
+        url(../img/Button/bg-red-br.jpg),
+        url(../img/Button/bg-red-bl.jpg);
     background-repeat: no-repeat;
     background-position: 0 0, 100% 0, 100% 100%, 0 100%;
     background-color: #a5190e;
@@ -211,4 +214,71 @@
 
 .btn-more:hover {
     box-shadow: 0 2px 12px rgb(0 0 0 / .8);
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.carousel-tracks {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    transition: transform 0.1s linear;
+}
+
+.container-flex {
+    gap: 8px;
+    display: flex;
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    height: 800px;
+}
+
+.art-flex {
+    display: flex;
+    gap: 8px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+.grid-2 img {
+    height: 50%;
+}
+
+.grid-3 img {
+    height: calc(100% / 3);
+}
+
+.grid-1 img {
+    height: 100%;
+}
+
+.grid-item img {
+    object-fit: cover;
+    object-position: center;
 }
