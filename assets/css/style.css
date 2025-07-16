@@ -298,6 +298,7 @@ footer {
     justify-content: center;
     margin-bottom:10px !important;
     padding: 0px 10px 0px 10px !important;
+    text-align: center;
 }
 .fot-info{
   border-bottom: 3px solid #242423;
@@ -378,6 +379,11 @@ footer {
     min-width: 0;
     width: 100%;
   }
+  .card-anh{
+    width:260px;
+    min-width:260px;
+    max-width:260px;
+  }
   /* .fot-mid {
     grid-area: mid;
     min-height: unset;
@@ -425,6 +431,11 @@ footer {
     font-size: 13px;
     margin: 0 auto;
   }
+  .card-anh{
+    width:260px;
+    min-width:260px;
+    max-width:260px;
+  }
   .card-anh img { height: 120px; object-fit: cover; }
   .control-list { font-size: 20px; gap: 10px; }
   .fot-logo { width: 60px; height: auto; }
@@ -458,6 +469,12 @@ footer {
   .map-content {
     height: 60%;
   }
+  .card-anh{
+    width:260px;
+    min-width:260px;
+    max-width:260px;
+  }
+  
   .map-title h2 { font-size: 13px; }
   .fot-logo { width: 50px; height: 60px; }
   .fot-info h2 { font-size: 14px; }
