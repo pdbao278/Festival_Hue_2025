@@ -247,8 +247,7 @@ footer {
     grid-template-rows: 110px;
     align-items: center;
     text-align: center;
-    padding: 10px;
-    padding-bottom: 0px !important;
+    padding: 10px 10px 0px 10px !important; 
 }
 .fot-logo{
     width: 110px;
@@ -336,7 +335,6 @@ footer {
     grid-template-columns: 80px 1fr 80px;
     grid-template-areas:
       "logo1 mid logo2";
-    padding: 0 10px;
     align-items: center;
 
   }
