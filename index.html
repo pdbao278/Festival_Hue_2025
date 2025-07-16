@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <div class="turtle-container">
@@ -14,14 +15,20 @@
     <div class="menu">
         <img src="assets/img/Background/bg-header-real.png" alt="Left Decor" class="logo-left">
         <img src="assets/img/Logo/logo-festival.png" alt="Festival Logo" class="logo">
-        <a href="#">Giới thiệu</a>
-        <a href="#">Sự kiện</a>
-        <a href="#">Làng nghề</a>
-        <a href="#">Ẩm thực</a>
-        <a href="#">Nghệ thuật</a>
-        <a href="#">Địa danh</a>
-        <img src="assets/img/Background/bg-header.png" alt="Left Decor" class="logo-right">
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        <div class="nav-links" id="nav-links">
+            <a href="#" class="bg-red-corners only-mobile-reset" id="gioithieu" >Giới thiệu</a>
+            <a href="#">Sự kiện</a>
+            <a href="#">Làng nghề</a>
+            <a href="#">Ẩm thực</a>
+            <a href="#">Nghệ thuật</a>
+            <a href="#">Địa danh</a>
+        </div>
+
+        <img src="assets/img/Background/bg-header.png" alt="Right Decor" class="logo-right">
     </div>
+
+
 
     <div class="banner"></div>
     <div class="introduction">
@@ -54,7 +61,7 @@
         <div class="line"></div>
         <div class="event-body">
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item bg-red-corners">
                     <h4>Festival Mùa Xuân Huế 2025</h4>
                     <p>Tháng 1 - Tháng 3/2025</p>
                 </div>
@@ -71,30 +78,111 @@
                     <p>Tháng 10 - Tháng 12/2025</p>
                 </div>
             </div>
-            <div class="event-info">
-                <div class="event-detail">
-                    <h4>Công bố Festival Huế 2025 và Chương trình nghệ thuật “Huế ngày mới”</h4>
-                    <p>📅 01/01/2025</p>
-                    <p>📍 Ngọ Môn, Đại Nội Huế</p>
+            <div class="event-contents">
+                <!-- MÙA XUÂN -->
+                <div class="event-info" id="spring">
+                    <div class="event-detail" data-index="0">
+                        <h4>🌸 Xuân: Lễ hội khai xuân</h4>
+                        <p>📅 01/01/2025</p>
+                        <p>📍 Công viên Thương Bạc</p>
+                    </div>
+                    <div class="event-detail" data-index="1" style="display: none;">
+                        <h4>Hội hoa xuân</h4>
+                        <p>📅 05/01/2025</p>
+                        <p>📍 Công viên Lê Lợi</p>
+                    </div>
+                    <div class="event-detail" data-index="2" style="display: none;">
+                        <h4>Thi vẽ áo dài</h4>
+                        <p>📅 12/01/2025</p>
+                        <p>📍 Trường Quốc Học</p>
+                    </div>
+                    <div class="event-detail" data-index="3" style="display: none;">
+                        <h4>Diễu hành văn hoá</h4>
+                        <p>📅 25/01/2025</p>
+                        <p>📍 Đường Lê Lợi</p>
+                    </div>
                 </div>
-                <div class="event-detail">
-                    <h4>Ngày hội Hoàng mai Huế lần thứ III năm 2025</h4>
-                    <p>📅 01/01/2025</p>
-                    <p>📍 Ngọ Môn, Đại Nội Huế</p>
+
+                <!-- MÙA HẠ -->
+                <div class="event-info" id="summer" style="display:none;">
+                    <div class="event-detail" data-index="0">
+                        <h4>☀️ Hạ: Lễ hội biển</h4>
+                        <p>📅 20/04/2025</p>
+                        <p>📍 Thuận An</p>
+                    </div>
+                    <div class="event-detail" data-index="1" style="display:none;">
+                        <h4>Chợ quê ngày hội</h4>
+                        <p>📅 10/05/2025</p>
+                        <p>📍 Cầu ngói Thanh Toàn</p>
+                    </div>
+                    <div class="event-detail" data-index="2" style="display:none;">
+                        <h4>Đêm nhạc trẻ</h4>
+                        <p>📅 21/05/2025</p>
+                        <p>📍 Phu Văn Lâu</p>
+                    </div>
+                    <div class="event-detail" data-index="3" style="display:none;">
+                        <h4>Ẩm thực ba miền</h4>
+                        <p>📅 01/06/2025</p>
+                        <p>📍 Công viên Tứ Tượng</p>
+                    </div>
                 </div>
-                <div class="event-detail">
-                    <h4>Chương trình Hương xưa bánh Tết</h4>
-                    <p>📅 01/01/2025</p>
-                    <p>📍 Ngọ Môn, Đại Nội Huế</p>
+
+                <!-- MÙA THU -->
+                <div class="event-info" id="autumn" style="display:none;">
+                    <div class="event-detail" data-index="0">
+                        <h4>🍁 Thu: Lễ hội trăng rằm</h4>
+                        <p>📅 20/08/2025</p>
+                        <p>📍 Trung tâm Huế</p>
+                    </div>
+                    <div class="event-detail" data-index="1" style="display:none;">
+                        <h4>Hội đèn lồng</h4>
+                        <p>📅 10/09/2025</p>
+                        <p>📍 Sông Hương</p>
+                    </div>
+                    <div class="event-detail" data-index="2" style="display:none;">
+                        <h4>Chương trình văn nghệ học sinh</h4>
+                        <p>📅 15/09/2025</p>
+                        <p>📍 Nhà Thiếu nhi Huế</p>
+                    </div>
+                    <div class="event-detail" data-index="3" style="display:none;">
+                        <h4>Trưng bày đèn cổ</h4>
+                        <p>📅 28/09/2025</p>
+                        <p>📍 Bảo tàng Huế</p>
+                    </div>
+                </div>
+
+                <!-- MÙA ĐÔNG -->
+                <div class="event-info" id="winter" style="display:none;">
+                    <div class="event-detail" data-index="0">
+                        <h4>❄️ Đông: Festival âm nhạc mùa đông</h4>
+                        <p>📅 15/11/2025</p>
+                        <p>📍 Nhà hát Duyệt Thị Đường</p>
+                    </div>
+                    <div class="event-detail" data-index="1" style="display:none;">
+                        <h4>Hội ánh sáng</h4>
+                        <p>📅 05/12/2025</p>
+                        <p>📍 Ngọ Môn</p>
+                    </div>
+                    <div class="event-detail" data-index="2" style="display:none;">
+                        <h4>Cuộc thi sáng tác ảnh mùa đông</h4>
+                        <p>📅 10/12/2025</p>
+                        <p>📍 Đại Nội</p>
+                    </div>
+                    <div class="event-detail" data-index="3" style="display:none;">
+                        <h4>Đêm nhạc acoustic</h4>
+                        <p>📅 22/12/2025</p>
+                        <p>📍 Cafe Mộc</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
+
+        </div>
         <div class="color-buttons">
-            <div class="color-circle yellow"></div>
-            <div class="color-circle red"></div>
-            <div class="color-circle blue"></div>
-            <div class="color-circle black"></div>
+            <div class="color-circle yellow" data-target="spring"></div>
+            <div class="color-circle red" data-target="summer"></div>
+            <div class="color-circle blue" data-target="autumn"></div>
+            <div class="color-circle black" data-target="winter"></div>
         </div>
 
     </div>
@@ -108,7 +196,7 @@
                     nổi tiếng với nghề làm hương thủ công từ nguyên liệu tự nhiên. Nơi đây không chỉ sản xuất hương
                     mà còn là điểm du lịch thu hút với sắc màu rực rỡ và không gian yên bình.</p>
 
-                <button class="more-info">Xem thêm</button>
+                <button class="btn-more bg-red-corners">Xem thêm</button>
             </div>
             <div class="village-img" style="background-image: url('assets/img/Lang-nghe/lang-huong-thuy-xuan.jpg')"></div>
         </div>
@@ -119,7 +207,7 @@
                     được ép thơ từ khoảng cuối thập niên 1950–1960. Với quy trình khéo léo khoảng 15 công đoạn từ
                     chọn lá, chuốt tre, chằm lá đến phơi nắng, nón Tây Hồ tinh mảnh, nhẹ, màu nhã và chứa đựng hồn thơ xứ Huế.
                 </p>
-                <button class="more-info">Xem thêm</button>
+                <button class="btn-more bg-red-corners">Xem thêm</button>
             </div>
             <div class="village-img" style="background-image: url('assets/img/Lang-nghe/du-lich-Lang-non-tay-ho-hue-mytour-3.jpg')"></div>
         </div>
@@ -130,11 +218,21 @@
                     của lịch sử và văn hóa. Giữa những ngôi nhà cổ kính, nghề làm quạt giấy truyền thống vẫn
                     âm thầm được duy trì. Những chiếc quạt không chỉ là vật dụng mà còn mang giá trị nghệ thuật
                     tinh tế. Tất cả được kết tinh từ đôi bàn tay khéo léo của người thợ Huế.</p>
-                <button class="more-info">Xem thêm</button>
+                <button class="btn-more bg-red-corners">Xem thêm</button>
             </div>
             <div class="village-img"  style="background-image: url('assets/img/Lang-nghe/Khamphahue-NgheQuatGiay_LeVanMinh_25_12_2024_16_47_14_885_CH.jpg')"></div>
         </div>
     </div>
 </div>
+
+<script>
+    const toggleBtn = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -7,13 +7,19 @@
     overflow: hidden;
     z-index: 0;
     height: 80px;
+    flex-wrap: nowrap;
 }
-.menu a:first-of-type {
-    margin-left: 100px;
-}
-
-.menu a:first-of-type {
-    color: green;
+#gioithieu {
+    color: white;
+    width: 120px;
+    height: 36px;
+    display: inline-block;
+    text-align: center;
+    line-height: 36px;
+    border: none;
+    outline: none;
+    padding-left: 10px !important;
+    margin-right: 30px !important;
 }
 
 .menu a {
@@ -24,14 +30,23 @@
     margin-right: 30px;
     font-size: 20px;
 }
+
+.menu a:first-of-type {
+    margin-left: 100px;
+    color: green;
+}
+
 .menu a:hover {
     color: red;
 }
+
 .logo {
     height: 100px;
     width: 100px;
 }
-.logo-left,.logo-right{
+
+.logo-left,
+.logo-right {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -43,15 +58,96 @@
     pointer-events: none;
     z-index: 1;
 }
-.logo-left{
+
+.logo-left {
     left: 0;
     margin-left: -100px;
     width: 800px;
     height: auto;
 }
-.logo-right{
+
+.logo-right {
     right: 0;
     width: 300px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    margin-left: auto;
+    margin-top: -40px; /* 👈 nâng lên */
+    z-index: 10;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: left;
+        padding-left: 10px;
+        font-family: "Mali", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+        text-decoration: none;
+    }
+
+    #gioithieu::after {
+        display: none !important;
+    }
+
+    #gioithieu {
+        all: unset;
+        display: block;
+        font-family: "Mali", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: black !important;
+        text-decoration: none;
+        text-align: left !important;
+        line-height: normal;
+        height: auto;
+        width: 100%;
+        margin: 0;
+    }
+    .timeline-item h4{
+        font-size: 14px!important;
+    }
+}
+button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 .banner{
     width: 100%;
@@ -141,16 +237,19 @@
     font-family: "Inter", sans-serif;
 }
 
+.timeline {
+    width: 30%;
+}
 .timeline-item {
     border: 1px solid #c09508;
     padding: 15px;
     border-radius: 10px;
     height: 50px;
-    width: 220px;
+    width: 80%;
     margin-right: 50px;
     margin-bottom: 20px;
     text-align: center;
-
+    cursor: pointer;
 }
 .timeline-item h4 {
     font-size: 16px;
@@ -158,13 +257,12 @@
     margin-top: 0 ;
 }
 .timeline-item p {
-    color: black;
     font-size: 14px;
 }
 .timeline-item:first-of-type  {
     background-color: #a40000;
-    color: #fff;
     border: none;
+    color: white;
     position: relative;
 }
 .event-info {
@@ -174,6 +272,10 @@
     gap: 20px;
 }
 
+.event-contents {
+    width: 70%;
+    margin-left: 50px;
+}
 .event-detail h4 {
     font-size: 24px;
     font-weight: bold;
@@ -198,6 +300,7 @@
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.2s;
+    z-index: 2;
 }
 
 .color-circle:hover {
@@ -208,6 +311,11 @@
 .red    { background-color: #b52320; }
 .blue   { background-color: #4362d0; }
 .black  { background-color: #1e1e1e; }
+
+.color-circle.active {
+    box-shadow: 0 0 0 4px white, 0 0 10px gold;
+    transform: scale(1.2);
+}
 
 .traditional-village {
     margin: 0 auto;
@@ -235,7 +343,6 @@
     font-family: "Inter", sans-serif;
 }
 
-/* Tiêu đề làng */
 .village-name {
     font-size: 22px;
     font-weight: bold;
@@ -244,7 +351,6 @@
     text-align: center;
 }
 
-/* Mô tả */
 .village-info {
     color: #444;
     line-height: 1.6;
@@ -252,7 +358,6 @@
     text-align: justify;
 }
 
-/* Ảnh */
 .village-img {
     flex: 1;
     min-width: 300px;
@@ -262,31 +367,44 @@
     border-radius: 10px;
 }
 
-/* Nút Xem thêm */
-.more-info {
-    background-color: #a40000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-}
-
-.more-info::before {
-    content: "";
-    position: absolute;
-    border: 2px solid gold;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border-radius: 5px;
-    pointer-events: none;
-}
 .village-img:hover {
     transform: scale(1.03);
     transition: 0.3s ease;
+}
+
+.btn-more {
+    width: auto;
+    display: inline-block;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 50px;
+    min-width: 150px;
+    color: #fff;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.bg-red-corners {
+    background-image: url(../img/Button/bg-red-tl.jpg),
+    url(../img/Button/bg-red-tr.jpg),
+    url(../img/Button/bg-red-br.jpg),
+    url(../img/Button/bg-red-bl.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-color: #a5190e;
+    border-radius: 5px;
+    position: relative;
+    align-items: center;
+}
+.bg-red-corners::after {
+    border: 1px solid #f7bd01;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
 }
 
