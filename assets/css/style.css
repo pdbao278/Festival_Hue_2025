@@ -242,11 +242,13 @@ footer {
 }
 
 .logo-and-social {
-    min-height: 100px;
     display: grid;
-    grid-template-columns: 110px auto 110px;
-    padding: 10px !important;
-    gap: 10px;
+    grid-template-columns: 110px 1fr 110px;
+    grid-template-rows: 110px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 0px !important;
 }
 .fot-logo{
     width: 110px;
@@ -277,11 +279,9 @@ footer {
     transition: color 0.3s, transform 0.3s;
 }
 
-.fot-mid{
-    min-height: 200px;
-    border-bottom: 3px solid #242423;
+/* .fot-mid{
 
-}
+} */
 .fot-mid i{
     font-size: 18px;
 }
@@ -299,8 +299,13 @@ footer {
     justify-content: center;
     margin-bottom: 10px;
 }
+.fot-info{
+  border-bottom: 3px solid #242423;
+  padding-top: 0px !important;
+}
 .fot-info p{
     margin-left: 5px;
+
 }
 
 .fot-bottom{
@@ -328,17 +333,16 @@ footer {
     text-align: center;
     gap: 10px;
     display: grid;
-    grid-template-columns: 70px 1fr 70px;
+    grid-template-columns: 80px 1fr 80px;
     grid-template-areas:
-      "logo1 mid logo2"
-      ". mid .";
-    padding: 10px 0;
+      "logo1 mid logo2";
+    padding: 0 10px;
     align-items: center;
+
   }
   .fot-logo {
     height: 80px;
-    padding: 8px 0;
-    width: 70px;
+    width: 80px;
     margin: 0 auto;
     display: block;
   }
@@ -374,14 +378,13 @@ footer {
     min-width: 0;
     width: 100%;
   }
-  .fot-mid {
+  /* .fot-mid {
     grid-area: mid;
-    border-bottom: 2px solid #242423;
     min-height: unset;
     padding: 10px 0;
-  }
+  } */
   .fot-info h2 { font-size: 16px; margin-bottom: 8px; }
-  .fot-info h4 { font-size: 13px; margin-bottom: 8px; }
+  .fot-info h3 { font-size: 13px; margin-bottom: 8px; }
   .fot-info div { margin-bottom: 6px; }
   .fot-info p { font-size: 12px; margin-left: 4px; }
   .list-social { height: 40px; gap: 6px; margin-bottom: 8px; }
@@ -423,16 +426,16 @@ footer {
   .fot-info h3 { font-size: 13px; }
   .fot-info p { font-size: 13px; }
   .logo-and-social {
-    grid-template-columns: 45px 1fr 45px;
+    grid-template-columns: 50px 1fr 50px;
     grid-template-areas:
-      "logo1 mid logo2"
-      ". mid .";
-    align-items: start;
+      "logo1 mid logo2";
+    align-items: center;
     padding: 6px 0;
+    grid-template-rows: 50px;
   }
-  .fot-logo { height: 45px; width: 45px; }
+  .fot-logo { height: 50px; width: 50px; }
   .fot-info h2 { font-size: 13px; }
-  .fot-info h4 { font-size: 11px; }
+  .fot-info h3 { font-size: 11px; }
   .fot-bottom { font-size: 10px; padding: 4px 0; }
   .list-social i { font-size: 16px; }
   .fot-mid i { font-size: 14px; }
@@ -449,7 +452,7 @@ footer {
     height: 60%;
   }
   .map-title h2 { font-size: 13px; }
-  .fot-logo { width: 40px; }
+  .fot-logo { width: 50px; height: 60px; }
   .fot-info h2 { font-size: 14px; }
   .fot-info h3 { font-size: 12px; }
   .fot-info p { font-size: 10px; }
