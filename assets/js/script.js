@@ -26,19 +26,16 @@ document.querySelectorAll(".color-circle").forEach((circle, index) => {
         });
     });
 });
-function toggleMenuButton() {
-    const toggle = document.getElementById("mobile-menu");
-    const nav = document.getElementById("nav-links");
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".timeline-item");
 
-    if (!toggle || !nav) return;
+    items.forEach(item => {
+        item.addEventListener("click", () => {
+            // Gỡ class đỏ của tất cả
+            items.forEach(i => i.classList.remove("bg-red-corners"));
 
-    if (window.innerWidth <= 768) {
-        toggle.style.display = "block";
-    } else {
-        toggle.style.display = "none";
-        nav.classList.remove("active"); // reset nav
-    }
-}
-
-window.addEventListener("resize", toggleMenuButton);
-window.addEventListener("DOMContentLoaded", toggleMenuButton);
+            // Gán class đỏ cho thằng vừa click
+            item.classList.add("bg-red-corners");
+        });
+    });
+});
