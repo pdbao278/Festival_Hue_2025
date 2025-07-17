@@ -461,11 +461,11 @@ footer {
   .map-info {
     font-size: 13px;
     padding: 10px;
-    width: 45%;
+    width: 42%;
     left: 60px;
   }
-  .map-info p { font-size: 12px; }
-  .map-title h2 { font-size: 16px; }
+  .map-info p { font-size: 13px; }
+  .map-title h2 { font-size: 17px; }
   .map-info h4 {
     font-size: 14px;
     margin-bottom: 8px;
@@ -522,11 +522,9 @@ footer {
     font-size: 11px;
     padding: 6px;
     width: 55%;
-    height: 60%;
+
   }
-  .map-content {
-    height: 60%;
-  }
+
   .card-anh{
     width:260px;
     min-width:260px;
