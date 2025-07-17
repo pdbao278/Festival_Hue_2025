@@ -81,9 +81,9 @@
 
 .map-info h4 {
     font-size: 14px;
-    color: #22d81b;
-    margin-bottom: 5px;
-    text-align: center;
+    color: #29be23;
+    margin-bottom: 7px;
+    text-align: justify;
 }
 .map-content {
   overflow: auto;
@@ -401,13 +401,13 @@ footer {
     margin: 0 auto;
     display: block;
   }
-  .fot-logo:first-child {
+  /* .fot-logo:first-child {
     grid-area: logo1;
     padding: 0;
   }
   .fot-logo:last-child {
     grid-area: logo2;
-  }
+  } */
   .dia-diem-du-lich {
     flex-direction: column;
     align-items: stretch;
@@ -498,16 +498,16 @@ footer {
   .fot-info p { font-size: 13px; }
   .fot-info i { font-size: 13px;}
   .logo-and-social {
-    grid-template-columns: 50px 1fr 50px;
+    grid-template-columns: 60px 1fr 60px;
     grid-template-areas:
       "logo1 mid logo2";
     align-items: center;
     padding: 6px 0;
-    grid-template-rows: 50px;
+    grid-template-rows: 60px;
   }
   .fot-logo { height: 60px; width: 60px; }
   .fot-info h2 { font-size: 18px; }
-  .fot-info h3 { font-size: 16px; }
+  .fot-info h3 { font-size: 15px; }
   .fot-info p { font-size: 14px; }
   .fot-bottom { font-size: 12px; padding: 4px 0; }
   .list-social i { font-size: 18px; }
@@ -532,7 +532,16 @@ footer {
     min-width:260px;
     max-width:260px;
   }
-  
+  .logo-and-social {
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-areas:
+      "logo1 mid logo2";
+    align-items: center;
+    padding: 4px 0;
+    grid-template-rows: 50px;
+  }
+
+
   .map-title h2 { font-size: 13px; }
   .fot-logo { width: 50px; height: 50px; }
   .fot-info h2 { font-size: 14px; }
