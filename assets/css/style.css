@@ -1,3 +1,6 @@
+.turtle-container{
+    max-width: 1440px;
+}
 .menu {
     position: relative;
     background-color: white;
@@ -27,8 +30,8 @@
     text-decoration: none;
     color: #000;
     font-weight: 600;
-    margin-right: 30px;
-    font-size: 20px;
+    font-size: 16px;
+    margin-right: 20px;
     z-index: 2;
 }
 
@@ -42,8 +45,10 @@
 }
 
 .logo {
-    height: 100px;
-    width: 100px;
+    max-height: 80px;
+    width: auto;
+    aspect-ratio: 1 / 1;
+    z-index: 3;
 }
 
 .logo-left,
@@ -96,9 +101,10 @@ button{
 }
 .banner{
     width: 100%;
-    height: 600px;
+    height: auto;
     background-image: url("../img/Banner/huetourism-cong-bo-poster-chinh-thuc-nam-du-lich-quoc-gia-hue-2025-1.jpg");
-    background-size: cover;
+    aspect-ratio: 16 / 8;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -175,35 +181,36 @@ button{
 
 .event-body {
     display: flex;
+    height: 90%;
     margin: 50px auto;
     margin-bottom: 0px;
-    padding-left: 100px;
     z-index: 2;
     position: relative;
     font-family: "Inter", sans-serif;
 }
 
 .timeline {
-    width: 30%;
+    width: 40%;
+    margin-left: 50px;
 }
 .timeline-item {
     border: 1px solid #c09508;
     padding: 15px;
     border-radius: 10px;
     height: 55px;
-    width: 80%;
-    margin-right: 50px;
+    width: 66%;
+    margin: 0 auto;
     margin-bottom: 20px;
     text-align: center;
     cursor: pointer;
 }
 .timeline-item h4 {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
     margin: 0 ;
 }
 .timeline-item p {
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 10px ;
 }
 .event-info {
@@ -234,6 +241,7 @@ button{
     gap: 20px;
     position: absolute;
     right: 100px;
+    bottom: 100px;
 }
 
 .color-circle {
@@ -285,6 +293,7 @@ button{
     flex: 1;
     min-width: 300px;
     font-family: "Inter", sans-serif;
+    text-align: center;
 }
 
 .village-name {
@@ -327,6 +336,7 @@ button{
     color: #fff;
     transition: all .3s ease;
     cursor: pointer;
+
 }
 
 .bg-red-corners {
@@ -353,13 +363,22 @@ button{
     right: 4px;
     bottom: 4px;
 }
-
+@media (min-width: 1025px) {
+    .menu a{
+        margin-right: 25px;
+        font-size: 20px;
+    }
+}
 
 @media (max-width: 768px) {
     .menu {
         flex-direction: column;
         align-items: flex-start;
         height: auto;
+    }
+    .color-circle {
+        width: 30px;
+        height: 30px;
     }
 
     .menu-toggle {
@@ -410,22 +429,47 @@ button{
     }
 
     .timeline-item h4 {
-        font-size: 13px !important;
+        font-size: 13px
     }
 
     .timeline-item p {
-        font-size: 12px !important;
+        font-size: 12px ;
+        margin-top: 8px;
     }
+    .event-detail h4 {
+        font-size: 18px
+    }
+    .event-detail p {
+        font-size: 14px
+    }
+    .village-name {
+        font-size: 18px !important;
+    }
+    .village-info {}
     .title{
         font-size: 24px !important;
     }
-    .content {
-        font-size: 16px !important;
+    .introduction .content {
+        font-size: 16px ;
     }
 }
-@media (max-width: 1024px) {
-    .menu a{
-        font-size: 16px;
-        margin-right: 20px;
+@media (max-width: 480px) {
+    .timeline-item {
+        width: 90%;
+    }
+    .timeline-item h4 {
+        font-size: 11px;
+    }
+    .timeline-item p {
+        font-size: 9px;
+    }
+    .event-detail h4 {
+        font-size: 14px;
+    }
+    .event-detail p {
+        font-size: 12px;
+    }
+    .introduction .content {
+        font-size: 14px ;
     }
 }
