@@ -168,9 +168,10 @@
         <div class="fot-bottom">
             <p>© 2025 TRUNG TÂM BẢO TỒN DI TÍCH CỐ ĐÔ HUẾ - Số giấy phép: 233/GP - BTTTT cấp ngày 16/5/2008.</p>
         </div>
-
     </footer>
-
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up" ></i>
+    </div>
     <script>
         // Xử lý sự kiện click vào nút đóng bản đồ
         document.querySelector('.control-info').addEventListener('click', function () {
@@ -392,6 +393,25 @@
                 }
             });
         });
+
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        // Ẩn nút khi ở đầu trang, hiện khi cuộn xuống 200px
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 200) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+        // Mặc định ẩn nếu ở đầu trang
+        if (window.scrollY <= 200) backToTopBtn.style.display = 'none';
+        // Sự kiện click để cuộn lên đầu trang
+        backToTopBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
     </script>
 </body>
 
