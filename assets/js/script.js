@@ -1,36 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const carouselTrack = document.querySelector('.carousel-track');
-    const img = carouselTrack.querySelectorAll('img');
-    const numsPic = img.length / 2;
-    let totalWidth = 0;
-    if (img.length > 0) {
-        for (let i = 0; i < numsPic; i++) {
-            totalWidth += img[i].offsetWidth + parseFloat(getComputedStyle(img[i]).marginRight);
-        }
-    }
-    document.documentElement.style.setProperty('--total-original-content-width', `${totalWidth}px`);
+let currentSeason = "spring";
 
-    let currentPosition = 0;
-    const speed = 1;
-    let isPaused = false;
-    function animateScroll() {
-        if(!isPaused) {
-            currentPosition -= speed;
-            if (currentPosition <= (-totalWidth - 2) / 2) {
-                currentPosition = 0;
-            }
-            carouselTrack.style.transform = `translateX(${currentPosition}px)`;
-        }
-        requestAnimationFrame(animateScroll);
-    }
+document.querySelectorAll(".timeline-item").forEach((item, index) => {
+    item.addEventListener("click", () => {
+        const seasons = ["spring", "summer", "autumn", "winter"];
+        currentSeason = seasons[index];
 
-    carouselTrack.addEventListener('mouseenter', () => {
-        isPaused = true;
+        // Ẩn tất cả mùa
+        document.querySelectorAll(".event-info").forEach(info => {
+            info.style.display = "none";
+        });
+
+        // Hiện mùa đang chọn, reset về index 0
+        const currentInfo = document.getElementById(currentSeason);
+        currentInfo.style.display = "flex";
+        currentInfo.querySelectorAll(".event-detail").forEach((d, i) => {
+            d.style.display = i === 0 ? "block" : "none";
+        });
     });
-
-    carouselTrack.addEventListener('mouseleave', () => {
-        isPaused = false;
+});
+document.querySelectorAll(".color-circle").forEach((circle, index) => {
+    circle.addEventListener("click", () => {
+        const info = document.getElementById(currentSeason);
+        info.querySelectorAll(".event-detail").forEach((d, i) => {
+            d.style.display = i === index ? "block" : "none";
+        });
     });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".timeline-item");
 
-    animateScroll();
+    items.forEach(item => {
+        item.addEventListener("click", () => {
+            // Gỡ class đỏ của tất cả
+            items.forEach(i => i.classList.remove("bg-red-corners"));
+
+            // Gán class đỏ cho thằng vừa click
+            item.classList.add("bg-red-corners");
+        });
+    });
 });
