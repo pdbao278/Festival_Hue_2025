@@ -866,14 +866,14 @@ footer {
     text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 /* ================= Responsive Design (Gộp lại) ================ */
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   .container { max-width: 1000px; }
   .list-dia-diem { gap: 12px; }
   .map-info { max-width: 400px; }
 
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .logo-and-social {
     grid-template-columns: 1fr;
     text-align: center;
@@ -882,8 +882,7 @@ footer {
     grid-template-columns: 75px 1fr 75px;
     grid-template-areas:
       "logo1 mid logo2";
-    align-items: center;
-
+    align-items: center;;
   }
   .fot-logo {
     height: 75px;
@@ -891,13 +890,6 @@ footer {
     margin: 0 auto;
     display: block;
   }
-  /* .fot-logo:first-child {
-    grid-area: logo1;
-    padding: 0;
-  }
-  .fot-logo:last-child {
-    grid-area: logo2;
-  } */
   .dia-diem-du-lich {
     flex-direction: column;
     align-items: stretch;
@@ -914,25 +906,29 @@ footer {
     left: 60px;
   }
   .map-info p { font-size: 13px; }
+  /* Fix: chỉ hiện 2 card trên 1 hàng, dùng flexbox */
   .list-dia-diem {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow: hidden !important;
     gap: 10px;
     padding: 0 4px;
+    width: 100%;
   }
   .card-dia-diem {
     min-width: 0;
-    width: 100%;
+    width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .card-anh{
     width:260px;
     min-width:260px;
     max-width:260px;
   }
-  /* .fot-mid {
-    grid-area: mid;
-    min-height: unset;
-    padding: 10px 0;
-  } */
   .fot-info h2 { font-size: 20px; margin-bottom: 8px; }
   .fot-info h3 { font-size: 16px; margin-bottom: 8px; }
   .fot-info div { margin-bottom: 6px; }
@@ -943,7 +939,7 @@ footer {
   .fot-bottom { font-size: 12px; height: auto; padding: 8px 0; text-align: center; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .list-control-map { top: 150px; }
   .container { padding: 2px; }
   .dia-diem-du-lich { padding: 0 2px; }
@@ -1007,7 +1003,7 @@ footer {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .map-info {
     font-size: 11px;
     padding: 6px;
