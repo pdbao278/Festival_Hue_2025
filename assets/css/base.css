@@ -21,6 +21,14 @@ a:hover {
   cursor: pointer;
 }
 
+ul {
+  margin-bottom: 16px;
+}
+
+img {
+  max-width: 100%;
+}
+
 h1 {
   color: #B2910E;
   text-align: center;
@@ -52,4 +60,13 @@ h1 {
 
 *, :after, :before {
     box-sizing: border-box;
+}
+
+.container, .containers {
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.containers {
+  width: 1400px;
 }
