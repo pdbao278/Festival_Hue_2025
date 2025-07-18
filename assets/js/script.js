@@ -12,9 +12,24 @@ document.querySelectorAll(".timeline-item").forEach((item, index) => {
         // Hiện mùa đang chọn, reset về index 0
         const currentInfo = document.getElementById(currentSeason);
         currentInfo.style.display = "flex";
-        currentInfo.querySelectorAll(".event-detail").forEach((d, i) => {
-            d.style.display = i === 0 ? "block" : "none";
+        const allDetails = currentInfo.querySelectorAll(".event-detail");
+        allDetails.forEach((d, i) => {
+            if (currentSeason === "winter") {
+                d.style.display = i < 2 ? (i === 0 ? "block" : "none") : "none";
+            } else {
+                d.style.display = i === 0 ? "block" : "none";
+            }
         });
+
+// Ẩn/hiện nút tròn tương ứng
+        document.querySelectorAll(".color-circle").forEach((circle, i) => {
+            if (currentSeason === "winter") {
+                circle.style.display = i < 2 ? "inline-block" : "none";
+            } else {
+                circle.style.display = "inline-block";
+            }
+        });
+
     });
 });
 document.querySelectorAll(".color-circle").forEach((circle, index) => {

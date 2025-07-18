@@ -1,6 +1,7 @@
 /* Rua */
 .turtle-container{
     max-width: 1440px;
+    margin: 0 auto;
 }
 .menu {
     position: relative;
@@ -46,7 +47,7 @@
 }
 
 .logo {
-    max-height: 80px;
+    max-height: 75px;
     width: auto;
     aspect-ratio: 1 / 1;
     z-index: 3;
@@ -225,6 +226,7 @@ button{
 .event-contents {
     width: 70%;
     margin-left: 50px;
+    position: relative;
 }
 
 .event-detail h4 {
@@ -239,19 +241,22 @@ button{
     color: #444;
 }
 .event-detail-child{
-    height: 110px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-right: 10px;
 }
 .color-buttons {
     display: flex;
     gap: 20px;
     position: absolute;
-    right: 100px;
-    bottom: 100px;
+    left: 50%;
+    bottom: 80px;
+    transform: translateX(-50%);
 }
 
 .color-circle {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.2s;
@@ -286,7 +291,7 @@ button{
     gap: 30px;
     margin: 0 auto;
     flex-wrap: wrap;
-    width: 85%;
+    width: 90%;
     margin-bottom: 50px;
 }
 
@@ -310,16 +315,17 @@ button{
 }
 
 .village-info {
-    color: #444;
+    color: #4F4F4F;
     line-height: 1.6;
     margin-bottom: 20px;
     text-align: justify;
+    font-size: 20px;
 }
 
 .village-img {
     flex: 1;
     min-width: 300px;
-    height: 230px;
+    height: 300px;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -450,7 +456,9 @@ button{
     .village-name {
         font-size: 18px !important;
     }
-    .village-info {}
+    .village-info {
+        font-size: 16px;
+    }
     .title{
         font-size: 24px !important;
     }
