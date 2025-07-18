@@ -15,7 +15,7 @@
 }
 #gioithieu {
     color: white;
-    width: 120px;
+    width: 140px;
     height: 36px;
     display: inline-block;
     text-align: center;
@@ -198,7 +198,7 @@ button{
     border: 1px solid #c09508;
     padding: 15px;
     border-radius: 10px;
-    height: 55px;
+    height: 100px;
     width: 66%;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -226,6 +226,7 @@ button{
     width: 70%;
     margin-left: 50px;
 }
+
 .event-detail h4 {
     font-size: 24px;
     font-weight: bold;
@@ -236,6 +237,9 @@ button{
 .event-detail p {
     margin: 2px 0;
     color: #444;
+}
+.event-detail-child{
+    height: 100px;
 }
 .color-buttons {
     display: flex;
@@ -455,8 +459,12 @@ button{
     }
 }
 @media (max-width: 480px) {
+    .timeline{
+        margin-left: 15px;
+    }
     .timeline-item {
         width: 90%;
+        height: 80px;
     }
     .timeline-item h4 {
         font-size: 11px;
@@ -472,6 +480,10 @@ button{
     }
     .introduction .content {
         font-size: 14px ;
+    }
+    .color-circle {
+        width: 20px;
+        height: 20px;
     }
 }
 
