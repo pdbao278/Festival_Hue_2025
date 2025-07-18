@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Hue Festival 2025 – Bản đồ Du Lịch</title>
+
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Bootstrap (tùy chọn, nếu xài thì bỏ comment) -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
 </head>
+
 <body>
+<<<<<<< HEAD
 <div class="turtle-container">
 
     <div class="menu">
@@ -374,5 +386,346 @@
     });
 </script>
 <script src="assets/js/script.js"></script>
+=======
+
+    <!-- Địa điem du lịch -->
+    <div class="dia-diem-du-lich ">
+        <div class="map">
+            <div class="list-control-map">
+                    <i class="fas fa-info icon-info"></i>
+                    <!-- <i class="fas fa-image icon-images"></i> -->
+            </div>
+            <div class="map-info">
+                <div class="map-title">
+                    <h2>Đại Nội Huế</h2>
+                    <div class="control-info">x</div>
+                </div>
+                <p>Đại Nội Huế là quần thể kiến trúc cung đình của triều Nguyễn, nằm trong Kinh thành Huế.
+                    Nơi đây từng là trung tâm chính trị, hành chính và lễ nghi của triều đình suốt hơn một thế kỷ.
+                    Đại Nội gồm Hoàng thành và Tử Cấm Thành với nhiều công trình nguy nga, cổ kính.
+                    Di sản này được UNESCO công nhận là Di sản Văn hóa Thế giới từ năm 1993.</p>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.1548931774328!2d107.57659917583011!3d16.467692784271062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a133c94c1643%3A0x43fd52385dcfacbf!2zTmfhu40gTcO0bg!5e0!3m2!1svi!2s!4v1752400834073!5m2!1svi!2s"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Danh sách địa điểm -->
+        <ul class="list-dia-diem container" id="locationList">
+            <li class="card-dia-diem"
+                data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.1548931774328!2d107.57659917583011!3d16.467692784271062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a133c94c1643%3A0x43fd52385dcfacbf!2zTmfhu40gTcO0bg!5e0!3m2!1svi!2s!4v1752400834073!5m2!1svi!2s">
+                <div class="card-anh">
+                    <div class="card-overlay"><i class="fas fa-map-marker-alt"></i></div>
+                    <img src="./assets/img/Du-lich/hoang-thanh-hue.jpg" alt="">
+                </div>
+                <div class="card-tieude">
+                    Đại Nội Huế
+                </div>
+            </li>
+
+            <li class="card-dia-diem"
+                data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.838917399373!2d107.5638565758294!3d16.433005384300508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a4038bc6d6c7%3A0x5976327fac723a0e!2zTMSDbmcgVOG7sSDEkOG7qWM!5e0!3m2!1svi!2s!4v1752400992061!5m2!1svi!2s">
+                <div class="card-anh">
+                    <div class="card-overlay"><i class="fas fa-map-marker-alt"></i></div>
+                    <img src="./assets/img/Du-lich/lang-Tu-Duc.jpg" alt="">
+                </div>
+                <div class="card-tieude">
+                    Lăng vua Tự Đức
+                </div>
+            </li>
+
+            <li class="card-dia-diem"
+                data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.1737616949354!2d107.63797752695312!3d16.46673690000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a14f1efae4a5%3A0x978974d3deb080b0!2zQ-G6p3UgbmfDs2kgVGhhbmggVG_DoG4!5e0!3m2!1svi!2s!4v1752401129396!5m2!1svi!2s">
+                <div class="card-anh">
+                    <div class="card-overlay"><i class="fas fa-map-marker-alt"></i></div>
+                    <img src="./assets/img/Du-lich/cau-ngoi-thanh-toan.jpg" alt="">
+                </div>
+                <div class="card-tieude">
+                    Cầu ngói Thanh Toàn
+                </div>
+            </li>
+
+            <li class="card-dia-diem"
+                data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828.234650119022!2d107.594358075828!3d16.36200488436072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a34086f368d7%3A0xe2405d40f33c77bc!2sL%C4%83ng%20Gia%20Long!5e0!3m2!1svi!2s!4v1752401248965!5m2!1svi!2s">
+                <div class="card-anh">
+                    <div class="card-overlay"><i class="fas fa-map-marker-alt"></i></div>
+                    <img src="./assets/img/Du-lich/lang-Gia-Long.png" alt="">
+                </div>
+                <div class="card-tieude">
+                    Lăng vua Gia Long
+                </div>
+            </li>
+
+            <li class="card-dia-diem"
+                data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2661544293414!2d107.6008611758308!3d16.51265558423287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a1f643caf119%3A0x46345c42f19aa219!2zTmjDoCBsxrB1IG5p4buHbSBCw6FjIEjhu5Mg4bufIEzDoG5nIETGsMahbmcgTuG7lw!5e0!3m2!1svi!2s!4v1752401444290!5m2!1svi!2s">
+                <div class="card-anh">
+                    <div class="card-overlay"><i class="fas fa-map-marker-alt"></i></div>
+                    <img src="./assets/img/Du-lich/làng-cổ-Phước-Tích.jpg" alt="">
+                </div>
+                <div class="card-tieude">
+                    Làng cổ Phước Tích
+                </div>
+            </li>
+            <li class="card-dia-diem"
+                data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7654.52430393755!2d107.5771488443657!3d16.411507129017018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a38cff0d22a5%3A0xb154e063660761f2!2zxJHhu5NpIFRoacOqbiBBbg!5e0!3m2!1svi!2s!4v1752401500788!5m2!1svi!2s">
+                <div class="card-anh">
+                    <div class="card-overlay"><i class="fas fa-map-marker-alt"></i></div>
+                    <img src="./assets/img/Du-lich/doi-thien-an.jpg" alt="">
+                </div>
+                <div class="card-tieude">
+                    Đồi Thiên An
+                </div>
+            </li>
+            <li class="card-dia-diem"
+                data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.126815078315!2d107.5860255757658!3d16.469115128607417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a10023cffeb1%3A0xd4e4de4f7ea75c85!2zQ-G6p3UgVHLGsOG7nW5nIFRp4buBbg!5e0!3m2!1svi!2s!4v1752401604613!5m2!1svi!2s">
+                <div class="card-anh">
+                    <div class="card-overlay"><i class="fas fa-map-marker-alt"></i></div>
+                    <img src="./assets/img/Du-lich/cau-Trang-Tien.jpg" alt="">
+                </div>
+                <div class="card-tieude">
+                    Cầu Tràng Tiền
+                </div>
+            </li>
+            <li class="card-dia-diem"
+                data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.4411934234045!2d107.54225817576557!3d16.453182929043628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a6972c6005d3%3A0xf7268b7a4cf579ba!2zQ2jDuWEgVGhpw6puIE3hu6U!5e0!3m2!1svi!2s!4v1752401640644!5m2!1svi!2s">
+                <div class="card-anh">
+                    <div class="card-overlay"><i class="fas fa-map-marker-alt"></i></div>
+                    <img src="./assets/img/Du-lich/chua-thien-mu.jpg" alt="">
+                </div>
+                <div class="card-tieude">
+                    Chùa Thiên Mụ
+                </div>
+            </li>
+        </ul>
+        <div class="control-list">
+            <i class="fas fa-caret-left"></i>
+            <i class="fas fa-caret-right"></i>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo-and-social container">
+            <img src="./assets/img/Logo/logo-festival.png" alt="" class="fot-logo">
+            <div class="fot-mid">
+                <div class="list-social">
+                    <a href="https://www.facebook.com/huefestival.official"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/@huefestivals"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@huefestival"><i class="fab fa-tiktok"></i></a>
+                    <a href=""><i class="fas fa-globe"></i></a>
+                </div>
+                <div class="fot-info">
+                    <h2>Trung tâm Bảo tồn Di tích Cố đô Huế</h2>
+                    <h4>Phòng Festival Huế, Tổ chức sự kiện và Truyền thông</h4>
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Địa chỉ: Tam Tòa, 33 Tống Duy Tân, phường Phú Xuân, thành phố Huế, Việt Nam</p>
+                    </div>
+                    <div>
+                        <i class="far fa-envelope"></i>
+                        <p>Email: huefestival.official@gmail.com - info@huefestival.com</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <p>Điện thoại: 0234 3511 419</p>
+                    </div>
+                </div>
+            </div>
+            <img src="./assets/img/Logo/logo-2.png" alt="" class="fot-logo">
+        </div>
+        <div class="fot-bottom">
+            <p>© 2025 TRUNG TÂM BẢO TỒN DI TÍCH CỐ ĐÔ HUẾ - Số giấy phép: 233/GP - BTTTT cấp ngày 16/5/2008.</p>
+        </div>
+
+    </footer>
+
+    <script>
+        // Xử lý sự kiện click vào nút đóng bản đồ
+        document.querySelector('.control-info').addEventListener('click', function () {
+            const mapContainer = document.querySelector('.map-info');
+            if (mapContainer) {
+                mapContainer.style.display = 'none';
+            }
+        });
+
+        // click vào icon info để hiển thị thông tin bản đồ
+        document.querySelector('.icon-info').addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            // Xóa vùng chọn văn bản nếu có
+            if (window.getSelection) {
+                const sel = window.getSelection();
+                if (sel && sel.removeAllRanges) sel.removeAllRanges();
+            } else if (document.selection) {
+                document.selection.empty();
+            }
+            const mapInfo = document.querySelector('.map-info');
+            if (!mapInfo) return;
+            const isVisible = (mapInfo.style.display !== 'none' && getComputedStyle(mapInfo).display !== 'none');
+            mapInfo.style.display = isVisible ? 'none' : 'block';
+        });
+
+
+
+        // click vào icon location để thay đổi thông tin info
+
+        const locationList = [
+        {
+            title: 'Đại Nội Huế',
+            content: `Đại Nội Huế là quần thể kiến trúc cung đình của triều Nguyễn, nằm trong Kinh thành Huế.
+                    Nơi đây từng là trung tâm chính trị, hành chính và lễ nghi của triều đình suốt hơn một thế kỷ.
+                    Đại Nội gồm Hoàng thành và Tử Cấm Thành với nhiều công trình nguy nga, cổ kính.
+                    Di sản này được UNESCO công nhận là Di sản Văn hóa Thế giới từ năm 1993.`
+                
+        }
+        , {
+            title: 'Lăng vua Tự Đức',
+            content: `Lăng vua Tự Đức là một trong những lăng tẩm nổi tiếng của triều Nguyễn, nằm ở ngoại ô thành phố Huế.
+                    Lăng được xây dựng từ năm 1864 và hoàn thành vào năm 1867, là nơi an nghỉ của vua Tự Đức và hoàng hậu.
+                    Kiến trúc lăng tẩm mang đậm phong cách cung đình với nhiều công trình kiến trúc độc đáo.`
+        }, {
+            title: 'Cầu ngói Thanh Toàn',
+            content: `Cầu ngói Thanh Toàn là một trong những cây cầu cổ kính và đẹp nhất ở Huế, được xây dựng vào thế kỷ 18.
+                    Cầu có kiến trúc độc đáo với mái ngói cong vút, nằm bắc qua một con kênh nhỏ, tạo nên khung cảnh thơ mộng.
+                    Đây là điểm đến yêu thích của du khách khi đến Huế.`
+        }, {
+            title: 'Lăng vua Gia Long',
+            content: `Lăng vua Gia Long là lăng tẩm đầu tiên của triều Nguyễn, nằm ở ngoại ô thành phố Huế.
+                    Lăng được xây dựng từ năm 1814 và hoàn thành vào năm 1820, là nơi an nghỉ của vua Gia Long - vị vua sáng lập triều Nguyễn.
+                    Kiến trúc lăng tẩm mang đậm phong cách cung đình với nhiều công trình kiến trúc độc đáo.`
+        }, {
+            title: 'Làng cổ Phước Tích',
+            content: `Làng cổ Phước Tích là một trong những làng cổ truyền thống của Việt Nam, nằm cách trung tâm thành phố Huế khoảng 30km về phía Tây.
+                    Làng có lịch sử hơn 500 năm, nổi tiếng với những ngôi nhà cổ kính, kiến trúc độc đáo và nghề thủ công truyền thống.
+                    Đây là điểm đến yêu thích của du khách khi muốn tìm hiểu về văn hóa và lịch sử của vùng đất Cố đô.`
+        }, {
+            title: 'Đồi Thiên An',
+            content: `Đồi Thiên An là một trong những địa điểm du lịch nổi tiếng ở Huế, nằm cách trung tâm thành phố khoảng 7km về phía Tây Nam.
+                    Đồi có độ cao khoảng 200m so với mực nước biển, từ đỉnh đồi có thể nhìn thấy toàn cảnh thành phố Huế và dòng sông Hương thơ mộng.
+                    Đồi Thiên An còn được biết đến với những cánh rừng thông xanh mướt, tạo nên khung cảnh thơ mộng và yên bình.`
+        }, {
+            title: 'Cầu Tràng Tiền',
+            content: `Cầu Tràng Tiền là cây cầu nổi tiếng nhất ở Huế, bắc qua sông Hương.
+                    Cầu được xây dựng vào năm 1899 và hoàn thành vào năm 1904, là biểu tượng của thành phố Huế.
+                    Cầu có kiến trúc độc đáo với 6 nhịp, mỗi nhịp dài 68m, tạo nên khung cảnh thơ mộng và lãng mạn.`
+        }, {
+            title: 'Chùa Thiên Mụ',
+            content: `Chùa Thiên Mụ là một trong những ngôi chùa cổ kính và nổi tiếng nhất ở Huế, nằm trên đồi Hà Khê bên bờ sông Hương.
+                    Chùa được xây dựng vào năm 1601, là nơi thờ Phật và cũng là nơi lưu giữ nhiều di sản văn hóa quý giá.
+                    Chùa có kiến trúc độc đáo với tháp Phước Duyên cao 21m, là biểu tượng của chùa Thiên Mụ.`
+        }
+        ];
+        // Hàm cập nhật thông tin bản đồ khi click vào icon location
+        function updateMapInfo(title, content) {    
+            const mapTitle = document.querySelector('.map-title h2');
+            const mapContent = document.querySelector('.map-info p');
+            if (mapTitle && mapContent) {
+                mapTitle.textContent = title;
+                mapContent.textContent = content;
+            }
+        }
+
+
+
+        // Quản lý hiển thị danh sách địa điểm
+        // Hiển thị 5 địa điểm mỗi lần
+        const itemsPerPage = 5;
+        let startIndex = 0;
+        const list = document.querySelectorAll('.card-dia-diem');
+        const leftBtn = document.querySelector('.fa-caret-left');
+        const rightBtn = document.querySelector('.fa-caret-right');
+        const maxIndex = list.length - itemsPerPage;
+
+        function updateBtnState() {
+            if (startIndex <= 0) {
+                leftBtn.classList.add('disabled');
+            } else {
+                leftBtn.classList.remove('disabled');
+            }
+            if (startIndex >= maxIndex) {
+                rightBtn.classList.add('disabled');
+            } else {
+                rightBtn.classList.remove('disabled');
+            }
+        }
+
+        function showWindow(start) {
+            list.forEach((item, i) => {
+                if (i >= start && i < start + itemsPerPage) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            updateBtnState();
+        }
+
+        leftBtn.onclick = function () {
+            if (startIndex > 0) {
+                startIndex--;
+                showWindow(startIndex);
+            }
+        };
+        rightBtn.onclick = function () {
+            if (startIndex < maxIndex) {
+                startIndex++;
+                showWindow(startIndex);
+            }
+        };
+
+        showWindow(startIndex);
+
+        // Tự động chuyển trang sang phải sau mỗi 4 giây, dừng khi hover card
+        let autoSlide = null;
+        function startAutoSlide() {
+            if (autoSlide) clearInterval(autoSlide);
+            autoSlide = setInterval(function () {
+                if (startIndex < maxIndex) {
+                    startIndex++;
+                    showWindow(startIndex);
+                } else if (startIndex >= maxIndex) {
+                    startIndex = 0;
+                    showWindow(startIndex);
+                }
+            }, 4000);
+        }
+        startAutoSlide();
+
+        // Dừng khi hover card, chạy lại khi rời chuột khỏi tất cả card
+        document.querySelectorAll('.card-dia-diem').forEach(function (card) {
+            card.addEventListener('mouseenter', function () {
+                if (autoSlide) clearInterval(autoSlide);
+            });
+            card.addEventListener('mouseleave', function () {
+                startAutoSlide();
+            });
+
+
+        });
+
+        // Đổi map và cập nhật info khi click icon location
+        document.querySelectorAll('.card-overlay i').forEach(function (icon, idx) {
+            icon.addEventListener('click', function (e) {
+                const card = icon.closest('.card-dia-diem');
+                const mapUrl = card.getAttribute('data-map-url');
+                if (mapUrl) {
+                    const iframe = document.querySelector('.map iframe');
+                    if (iframe) iframe.src = mapUrl;
+                }
+                // Cập nhật info theo vị trí card
+                if (locationList[idx]) {
+                    updateMapInfo(locationList[idx].title, locationList[idx].content);
+                }
+                e.stopPropagation();
+                const mapContainer = document.querySelector('.map-info');
+                if (mapContainer) {
+                    mapContainer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+>>>>>>> Lalaboy
 </body>
+
 </html>
