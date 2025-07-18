@@ -1,2 +1,1 @@
-﻿# Festival_Hue_2025
-https://turtle3ds.github.io/FestivalHue2025/
+
