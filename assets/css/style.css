@@ -11,7 +11,6 @@
     padding: 20px 30px;
     overflow: hidden;
     z-index: 0;
-    height: 80px;
     flex-wrap: nowrap;
 }
 #gioithieu {
@@ -197,7 +196,7 @@ button{
 }
 .timeline-item {
     border: 1px solid #c09508;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     height: 100px;
     width: 66%;
@@ -207,13 +206,13 @@ button{
     cursor: pointer;
 }
 .timeline-item h4 {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 600;
     margin: 0 ;
 }
 .timeline-item p {
     font-size: 15px;
-    margin-top: 10px ;
+    margin-top: 7px ;
 }
 .event-info {
     flex: 2;
@@ -230,7 +229,7 @@ button{
 }
 
 .event-detail h4 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     margin-bottom: 5px;
     color: #000;
@@ -242,7 +241,7 @@ button{
 }
 .event-detail-child{
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-right: 10px;
 }
 .color-buttons {
@@ -380,7 +379,14 @@ button{
         font-size: 20px;
     }
 }
-
+@media (max-width: 960px) {
+    .village-info{
+        font-size: 17px;
+    }
+    .event-detail h4{
+        font-size: 20px;
+    }
+}
 @media (max-width: 768px) {
     .menu {
         flex-direction: column;
@@ -438,7 +444,9 @@ button{
         margin: 0;
         color: red !important;
     }
-
+    .timeline{
+        margin-left: 20px;
+    }
     .timeline-item h4 {
         font-size: 13px
     }
