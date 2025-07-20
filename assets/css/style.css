@@ -391,6 +391,7 @@
     background: url(../img/Button/bg-red-pattern.jpg);
     background-size: 50px;
     padding: 10px;
+    text-transform: uppercase;
 }
 
 .artcard-infor p {
@@ -400,7 +401,7 @@
     padding: 10px;
     min-height: 60px;
     font-size: 24px;
-    
+    text-transform: uppercase;
 }
 
 

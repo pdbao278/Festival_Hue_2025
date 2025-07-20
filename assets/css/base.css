@@ -27,6 +27,7 @@ ul {
 
 img {
   max-width: 100%;
+  object-position: center;
 }
 
 h1 {
