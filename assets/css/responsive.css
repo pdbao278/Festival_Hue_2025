@@ -1,0 +1,134 @@
+
+@media (min-width: 1200px) {
+    .food-flex,
+    .foods, .artmenu-wrapper {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header-section, .food-flex, .foods, .food-grid, .food-grids, .text-wrapper {
+        width: 100% !important;
+    }
+    .box-food, .food-grid {
+        width: 100%;
+        margin: 20px auto 0 auto;
+    }
+    .box-food-section {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .intro {
+        font-size: 24px;
+    }
+    .actives {
+        margin: 0;
+        margin-top: 24px;
+    }
+    .artcard-infor p {
+        font-size: 18px;
+    }
+    .artcard-infor h3 {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .text--decor {
+        margin-bottom: 8px !important;
+    }
+    .food-grids {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .food-grids > .food-card:nth-child(3) {
+        grid-column: span 2 / span 2;
+        grid-row-start: 2;
+    }
+    .intro {
+        font-size: 22px;
+    }
+    .food-info {
+        width: 100%;
+    }
+    .food-flex {
+        flex-direction: column;
+    }
+    .intro {
+        text-align: center;
+    }
+    .flex-box {
+        height: 480px;
+    }
+    .carousel-container img{
+        height: 400px;
+    }
+    .actives {
+        margin: 0;
+        margin-top: 20px;
+    }
+    /* Responsive Nghe thuat */
+    .art-large, .art-small {
+        width: 100%;
+    }
+    .art-card {
+        padding: 0px;
+    }
+    .row.active {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-top: 8px;
+    }
+    .row.active > .art-card:nth-child(1) {
+        grid-column: span 2 / span 2;
+    }
+    .row.active > .art-large:nth-child(2) {
+        grid-column: span 2 / span 2;
+    }
+    .wrap-select {
+        display: block !important;
+        margin-bottom: 16px;
+    }
+    .artnav {
+        display: none !important;
+    }
+    .artcard-infor p {
+        font-size: 18px;
+    }
+    .artcard-infor h3 {
+        font-size: 16px;
+    }
+    /* End */
+}
+
+@media (max-width: 578px) {
+    .food-grids {
+        display: flex;
+        flex-direction: column;
+    }
+    .intro {
+        font-size: 20px;
+    }
+    .header-section h1 {
+        font-size: 34px;
+    }
+
+    .food-grid, .food-grids {
+        grid-template-columns: auto;
+        gap: 16px;
+    }
+    .actives {
+        margin: 0;
+        margin-top: 16px;
+    }
+    .intro {
+        padding: 0 !important;
+    }
+}
+
+
+
