@@ -1066,7 +1066,7 @@ button{
 .map-content {
   overflow: auto;
   height: 282px;
-  /* padding:5px; */
+  padding:10px;
 }
 .list-control-map{
     position: absolute;
