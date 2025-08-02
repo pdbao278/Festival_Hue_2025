@@ -526,7 +526,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (targetSection) {
                     // Tính toán vị trí scroll (trừ đi height của header)
                     const headerHeight = document.querySelector('.menu').offsetHeight || 0;
-                    const targetPosition = targetSection.offsetTop - headerHeight + 10; // Thêm 20px padding
+                    const activeNav = document.querySelector('.nav-links.active');
+                    const navHeight = activeNav ? activeNav.offsetHeight + 20 : 0;
+                    const targetPosition = targetSection.offsetTop - headerHeight + navHeight; // Thêm 20px padding
                     
                     // Smooth scroll
                     window.scrollTo({
@@ -574,14 +576,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Mobile menu toggle (nếu cần)
-    // const mobileMenuToggle = document.getElementById('mobile-menu');
-    // const navLinksContainer = document.getElementById('nav-links');
-    
-    // if (mobileMenuToggle && navLinksContainer) {
-    //     mobileMenuToggle.addEventListener('click', function() {
-    //         navLinksContainer.classList.toggle('active');
-    //     });
-    // }
 });
