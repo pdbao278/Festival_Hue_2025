@@ -492,3 +492,96 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //End Lala
+
+
+// Navigation smooth scroll functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Lấy tất cả nav links
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    // Tạo mapping giữa nav items và sections tương ứng
+    const sectionMapping = {
+        'Giới thiệu': '.section-2',
+        'Sự kiện': '.event-schedule',
+        'Làng nghề': '.traditional-village',
+        'Ẩm thực': '.section-food',
+        'Nghệ thuật': '.section-art',
+        'Địa danh': '.dia-diem-du-lich'
+    };
+    
+    // Thêm event listener cho mỗi nav link
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Ngăn hành vi mặc định của link
+            
+            // Lấy text của link để xác định section
+            const linkText = this.textContent.trim();
+            
+            // Tìm section tương ứng
+            const targetSelector = sectionMapping[linkText];
+            
+            if (targetSelector) {
+                const targetSection = document.querySelector(targetSelector);
+                
+                if (targetSection) {
+                    // Tính toán vị trí scroll (trừ đi height của header)
+                    const headerHeight = document.querySelector('.menu').offsetHeight || 0;
+                    const targetPosition = targetSection.offsetTop - headerHeight + 10; // Thêm 20px padding
+                    
+                    // Smooth scroll
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Đóng mobile menu nếu đang mở
+                    const navLinksContainer = document.getElementById('nav-links');
+                    if (navLinksContainer && navLinksContainer.classList.contains('active')) {
+                        navLinksContainer.classList.remove('active');
+                    }
+                    
+                    // Thêm active class cho nav item được click
+                    navLinks.forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            }
+        });
+    });
+    
+    // Optional: Highlight nav item dựa trên scroll position
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY + 100; // Offset cho header
+        
+        // Tìm section hiện tại đang hiển thị
+        Object.entries(sectionMapping).forEach(([navText, sectionSelector]) => {
+            const section = document.querySelector(sectionSelector);
+            if (section) {
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    // Remove active từ tất cả nav links
+                    navLinks.forEach(nav => nav.classList.remove('active'));
+                    
+                    // Thêm active cho nav link tương ứng
+                    const activeNav = Array.from(navLinks).find(nav => 
+                        nav.textContent.trim() === navText
+                    );
+                    if (activeNav) {
+                        activeNav.classList.add('active');
+                    }
+                }
+            }
+        });
+    });
+    
+    // Mobile menu toggle (nếu cần)
+    // const mobileMenuToggle = document.getElementById('mobile-menu');
+    // const navLinksContainer = document.getElementById('nav-links');
+    
+    // if (mobileMenuToggle && navLinksContainer) {
+    //     mobileMenuToggle.addEventListener('click', function() {
+    //         navLinksContainer.classList.toggle('active');
+    //     });
+    // }
+});

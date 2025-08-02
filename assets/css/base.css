@@ -12,6 +12,10 @@
   font-family: 'Mali';
 }
 
+body {
+  padding-top: 80px;
+}
+
 a {
   font-family: sans-serif;
   text-decoration: none;
