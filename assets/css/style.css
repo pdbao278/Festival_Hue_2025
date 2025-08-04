@@ -24,10 +24,11 @@
     font-weight: 600;
     font-size: 16px;
     z-index: 2;
-
     display: flex;
     justify-content: center;
     align-items:center ;
+    padding-bottom: 8px;
+    padding-top: 8px;
 }
 
 .menu a:hover {
@@ -39,6 +40,7 @@
     width: auto;
     aspect-ratio: 1 / 1;
     z-index: 3;
+
 }
 
 .logo-left,
@@ -433,7 +435,7 @@ button{
     .menu {
         flex-direction: column;
         align-items: flex-start;
-        height: 90px;
+        height: auto;
     }
     .color-circle {
         width: 30px;
@@ -442,18 +444,21 @@ button{
 
     .menu-toggle {
         display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 1001;
     }
 
     .nav-links {
-        display: none;
+        display: none !important;
         flex-direction: column;
         width: 100%;
         margin: 10px 0px 10px 16px;
         gap: 10px;
     }
-
     .nav-links.active {
-        display: flex;
+        display: flex !important;
     }
 
     .nav-links a {
@@ -552,7 +557,26 @@ button{
     }
 
     .menu{
-        height: 80px;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        z-index: 1001;
+    }
+    .nav-links {
+        display: none !important;
+        flex-direction: column;
+        width: 100%;
+        margin: 10px 0px 10px 16px;
+        gap: 10px;
+    }
+    .nav-links.active {
+        display: flex !important;
     }
     .menu img{
         max-width: 60px;
