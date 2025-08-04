@@ -129,6 +129,11 @@
         padding: 0 !important;
     }
 }
+@media (max-width: 420px){
+    .header-section h1 {
+        font-size: 25px;
+    }
+}
 
 
 

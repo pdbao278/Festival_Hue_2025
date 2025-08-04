@@ -189,10 +189,13 @@ button{
     border: 1px solid #a5190e;
     border-radius: 5px;
     color: #323232;
-    display: block;
+    display: flex;
     font-size: 20px;
     padding: 22px;
     text-align: center;
+    flex-direction: column;      /* h4 và p nằm dọc */
+    justify-content: center;     /* căn giữa theo chiều dọc */
+    align-items: center;
     min-width: 140px;
     transition: all 0.4s ease;
     margin-bottom: 12px;
@@ -399,6 +402,15 @@ button{
     .event-detail h4{
         font-size: 20px;
     }
+    .timeline-item{
+        padding: 18px;
+    }
+    .timeline-item h4{
+        font-size: 15px;
+    }
+    .event-detail-child{
+        margin-bottom: 12px;
+    }
 }
 @media (max-width: 768px) {
     .menu {
@@ -494,6 +506,7 @@ button{
     .timeline-item {
         width: 90%;
         height: 80px;
+        min-width: 120px;
     }
     .timeline-item h4 {
         font-size: 11px;
@@ -502,10 +515,10 @@ button{
         font-size: 9px;
     }
     .event-detail h4 {
-        font-size: 14px;
+        font-size: 13px;
     }
     .event-detail p {
-        font-size: 12px;
+        font-size: 11px;
     }
     .introduction .content {
         font-size: 14px ;
@@ -513,6 +526,9 @@ button{
     .color-circle {
         width: 20px;
         height: 20px;
+    }
+    .event-contents{
+        margin-left: 30px;
     }
 }
 
@@ -958,7 +974,10 @@ button{
     width: 880px;
     margin: 0 auto;
     padding-top: 20px !important;
+
+
 }
+
 /* End Miracle */
 
 
