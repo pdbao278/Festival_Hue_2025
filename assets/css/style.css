@@ -572,10 +572,10 @@ button{
     /* .nav-links.active {
         display: flex !important;
     } */
-    /* .menu .logo{
+    .menu .logo{
         max-width: 60px;
         max-height: 60px;
-    } */
+    }
     .banner{
         margin-top: 0 !important;
     }
@@ -1422,12 +1422,12 @@ footer {
     text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 /* ================= Responsive Design (Gộp lại) ================ */
-/* @media (max-width: 1280px) {
+@media (max-width: 1280px) {
   .container { max-width: 1000px; }
   .list-dia-diem { gap: 12px; }
   .map-info { max-width: 400px; }
 
-} */
+}
 
 @media (max-width: 1024px) {
   .logo-and-social {
@@ -1495,17 +1495,7 @@ footer {
   .fot-bottom { font-size: 12px; height: auto; padding: 8px 0; text-align: center; }
 }
 
-@media (max-width: 960px) {
-    .fot-info h2 { font-size: 25px; margin-bottom: 8px; }
-    .fot-info h3 { font-size: 20px; margin-bottom: 8px; }
-    .list-social i { font-size: 25px;}
-    footer p{
-        font-size: 16px;
-    }
-    .fot-info p{
-        font-size: 16px;
-    }
-}
+
 
 @media (max-width: 768px) {
   .list-control-map { top: 150px; }
@@ -1596,8 +1586,8 @@ footer {
 
   .map-title h2 { font-size: 13px; }
   .fot-logo { width: 60px; height: 60px; }
-  .fot-info h2 { font-size: 18px; }
-  .fot-info h3 { font-size: 16px; }
+  .fot-info h2 { font-size: 17px; }
+  .fot-info h3 { font-size: 15px; }
   .fot-info p { font-size: 12px; }
   .fot-mid i { font-size: 15px; }
   .fot-info i { font-size: 12px;}
@@ -1606,6 +1596,9 @@ footer {
   .back-to-top{
     width: 40px;
     height: 40px;
+  }
+  .intro{
+    font-size: 18px;
   }
 }
 /* =============== End Responsive Design (Gộp lại) =============== */
