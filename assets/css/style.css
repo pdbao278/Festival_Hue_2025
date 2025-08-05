@@ -579,6 +579,9 @@ button{
     .banner{
         margin-top: 0 !important;
     }
+    .menu-toggle{
+        top: 10px;
+    }
 }
 
 /* Miracle */
@@ -1461,7 +1464,6 @@ footer {
     width: 35%;
     left: 60px;
   }
-  .map-info p { font-size: 13px; }
   /* Fix: chỉ hiện 2 card trên 1 hàng, dùng flexbox */
   .list-dia-diem {
     display: flex !important;
@@ -1485,14 +1487,14 @@ footer {
     min-width:260px;
     max-width:260px;
   }
-  .fot-info h2 { font-size: 20px; margin-bottom: 8px; }
-  .fot-info h3 { font-size: 16px; margin-bottom: 8px; }
+  .fot-info h2 { font-size: 18px !important; margin-bottom: 8px; }
+  .fot-info h3 { font-size: 16px !important; margin-bottom: 8px; }
   .fot-info div { margin-bottom: 6px; }
-  .fot-info p { font-size: 13px; margin-left: 4px; }
-  .fot-info i { font-size: 13px;}
+  .fot-info p { font-size: 16px; margin-left: 4px; }
+  .fot-info i { font-size: 16px;}
   .list-social { height: 40px; gap: 6px; margin-bottom: 8px; }
   .list-social i { font-size: 22px; }
-  .fot-bottom { font-size: 12px; height: auto; padding: 8px 0; text-align: center; }
+  .fot-bottom { font-size: 16px; height: auto; padding: 8px 0; text-align: center; }
 }
 
 
@@ -1536,10 +1538,7 @@ footer {
   }
   .card-anh img { height: 120px; object-fit: cover; }
   .control-list { font-size: 20px; gap: 10px; }
-  .fot-logo { width: 55px; height: 55px; }
-  .fot-info h2 { font-size: 16px; }
-  .fot-info h3 { font-size: 13px; }
-  .fot-info p { font-size: 13px; }
+  /* .fot-logo { width: 55px; height: 55px; } */
   .fot-info i { font-size: 13px;}
   .logo-and-social {
     grid-template-columns: 75px 1fr 75px;
@@ -1550,10 +1549,10 @@ footer {
     grid-template-rows: 75px;
   }
   .fot-logo { height: 75px; width: 75px; }
-  .fot-info h2 { font-size: 18px; }
-  .fot-info h3 { font-size: 16px; }
+  .fot-info h2 { font-size: 18px !important; }
+  .fot-info h3 { font-size: 16px !important; }
   .fot-info p { font-size: 14px; }
-  .fot-bottom { font-size: 12px; padding: 4px 0; }
+  .fot-bottom { font-size: 14px; padding: 4px 0; }
   .list-social i { font-size: 18px; }
   .back-to-top {
     width: 45px;
@@ -1597,8 +1596,13 @@ footer {
     width: 40px;
     height: 40px;
   }
+  /* rua */
   .intro{
-    font-size: 18px;
+    font-size: 20px;
+  }
+  .event-detail-child
+  {
+    margin-bottom: 15px;
   }
 }
 /* =============== End Responsive Design (Gộp lại) =============== */
