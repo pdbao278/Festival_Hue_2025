@@ -1429,6 +1429,14 @@ footer {
   .container { max-width: 1000px; }
   .list-dia-diem { gap: 12px; }
   .map-info { max-width: 400px; }
+  .fot-info h2{
+    font-size: 20px !important;
+    margin-left: 8px;
+  }
+  .fo-int-info h3{
+    font-size: 18px !important;
+    margin-left: 8px;
+  }
 
 }
 
