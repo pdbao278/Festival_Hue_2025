@@ -577,3 +577,299 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Scroll Animation - Slide in from both sides
+class ScrollAnimator {
+    constructor() {
+        this.elements = [];
+        this.init();
+    }
+
+    init() {
+        // Setup CSS classes for animations
+        this.setupCSS();
+        
+        // Find all elements to animate
+        this.setupElements();
+        
+        // Setup intersection observer
+        this.setupObserver();
+        
+        // Initial check for elements already in view
+        this.checkInitialElements();
+    }
+
+    setupCSS() {
+        // Create and inject CSS for animations
+        const style = document.createElement('style');
+        style.textContent = `
+            /* Base animation styles */
+            .scroll-animate {
+                opacity: 0;
+                transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+
+            /* Slide from left */
+            .slide-from-left {
+                transform: translateX(-100px);
+            }
+
+            /* Slide from right */
+            .slide-from-right {
+                transform: translateX(100px);
+            }
+
+            /* Fade up */
+            .fade-up {
+                transform: translateY(50px);
+            }
+
+            /* Scale up */
+            .scale-up {
+                transform: scale(0.8);
+            }
+
+            /* Active state - visible */
+            .scroll-animate.active {
+                opacity: 1;
+                transform: translateX(0) translateY(0) scale(1) rotate(0);
+            }
+
+            /* Stagger animation for child elements */
+            .stagger-children .scroll-animate {
+                transition-delay: 0s;
+            }
+
+            .stagger-children .scroll-animate:nth-child(1) { transition-delay: 0.1s; }
+            .stagger-children .scroll-animate:nth-child(2) { transition-delay: 0.2s; }
+            .stagger-children .scroll-animate:nth-child(3) { transition-delay: 0.3s; }
+            .stagger-children .scroll-animate:nth-child(4) { transition-delay: 0.4s; }
+            .stagger-children .scroll-animate:nth-child(5) { transition-delay: 0.5s; }
+            .stagger-children .scroll-animate:nth-child(6) { transition-delay: 0.6s; }
+
+            /* Special animations for specific elements */
+            .carousel-container img {
+                transition: transform 0.6s ease, opacity 0.6s ease;
+            }
+
+            .food-card, .village-item, .art-card {
+                transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                           opacity 0.8s ease;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    setupElements() {
+        // Define selectors and their animation types
+        const animationConfig = [
+            // Headers and titles - alternate left/right
+            { selector: 'h1, .village-name', animation: 'alternate' },
+            
+            // Text content - fade up
+            { selector: '.intro, .village-info, p', animation: 'fade-up' },
+            
+            // Cards and items - alternate left/right
+            { selector: '.village-item, .village-item-reverse', animation: 'alternate' },
+
+            // Images - scale up
+            { selector: '.carousel-container img, .village-img', animation: 'scale-up' },
+            
+            { selector: '.food-grid, .food-grids', animation: 'fade-up' },
+
+            // Art cards - scale up
+            { selector: '.art-card', animation: 'fade-up' },
+            
+            // Location cards - scale up
+            { selector: '.card-dia-diem', animation: 'scale-up' },
+            
+            // Timeline items - alternate
+            { selector: '.timeline-item', animation: 'alternate' },
+            
+            // Event details - alternate
+            { selector: '.event-detail-child', animation: 'alternate' }
+        ];
+
+        let leftRightCounter = 0;
+
+        animationConfig.forEach(config => {
+            const elements = document.querySelectorAll(config.selector);
+            
+            elements.forEach((element, index) => {
+                // Skip if already has animation class
+                if (element.classList.contains('scroll-animate')) return;
+                
+                element.classList.add('scroll-animate');
+                
+                // Apply animation based on type
+                switch (config.animation) {
+                    case 'alternate':
+                        if (leftRightCounter % 2 === 0) {
+                            element.classList.add('slide-from-left');
+                        } else {
+                            element.classList.add('slide-from-right');
+                        }
+                        leftRightCounter++;
+                        break;
+                        
+                    case 'fade-up':
+                        element.classList.add('fade-up');
+                        break;
+                        
+                    case 'scale-up':
+                        element.classList.add('scale-up');
+                        break;
+                }
+                
+                this.elements.push(element);
+            });
+        });
+
+        // Add stagger effect to container elements
+        const staggerContainers = document.querySelectorAll(
+            '.food-grids, .village-item, .event-detail, .list-dia-diem'
+        );
+        staggerContainers.forEach(container => {
+            container.classList.add('stagger-children');
+        });
+    }
+
+    setupObserver() {
+        const options = {
+            root: null,
+            rootMargin: '-10% 0px -10% 0px', // Trigger when 10% of element is visible
+            threshold: 0.1
+        };
+
+        this.observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add active class with slight delay for smoother effect
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, 50);
+                    
+                    // Optional: Stop observing once animated (remove if you want re-trigger on scroll up)
+                    // this.observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        // Observe all elements
+        this.elements.forEach(element => {
+            this.observer.observe(element);
+        });
+    }
+
+    checkInitialElements() {
+        // Check if any elements are already in viewport on page load
+        const viewportHeight = window.innerHeight;
+        
+        this.elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const isInViewport = rect.top < viewportHeight * 0.8 && rect.bottom > 0;
+            
+            if (isInViewport) {
+                element.classList.add('active');
+            }
+        });
+    }
+
+    // Method to manually trigger animation for specific elements
+    animateElement(selector) {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(element => {
+            if (element.classList.contains('scroll-animate')) {
+                element.classList.add('active');
+            }
+        });
+    }
+
+    // Method to reset animations (useful for dynamic content)
+    resetAnimations() {
+        this.elements.forEach(element => {
+            element.classList.remove('active');
+        });
+    }
+
+    // Method to add new elements to animation system
+    addNewElements(selector, animationType = 'alternate') {
+        const elements = document.querySelectorAll(selector);
+        let counter = this.elements.length;
+        
+        elements.forEach(element => {
+            if (element.classList.contains('scroll-animate')) return;
+            
+            element.classList.add('scroll-animate');
+            
+            switch (animationType) {
+                case 'alternate':
+                    if (counter % 2 === 0) {
+                        element.classList.add('slide-from-left');
+                    } else {
+                        element.classList.add('slide-from-right');
+                    }
+                    break;
+                case 'fade-up':
+                    element.classList.add('fade-up');
+                    break;
+                case 'scale-up':
+                    element.classList.add('scale-up');
+                    break;
+            }
+            
+            this.elements.push(element);
+            this.observer.observe(element);
+            counter++;
+        });
+    }
+}
+
+// Initialize the scroll animator when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollAnimator = new ScrollAnimator();
+    
+    // Make it globally accessible for debugging or manual control
+    window.scrollAnimator = scrollAnimator;
+    
+    // Optional: Add some extra effects for specific sections
+    
+    // Animate carousel images with delay
+    const carouselImages = document.querySelectorAll('.carousel-container img');
+    carouselImages.forEach((img, index) => {
+        img.style.transitionDelay = `${index * 0.05}s`;
+    });
+    
+    console.log('Scroll animations initialized!');
+});
+
+// Optional: Performance optimization - pause animations when tab is not visible
+document.addEventListener('visibilitychange', function() {
+    const animatedElements = document.querySelectorAll('.scroll-animate');
+    
+    if (document.hidden) {
+        // Pause animations
+        animatedElements.forEach(element => {
+            element.style.animationPlayState = 'paused';
+        });
+    } else {
+        // Resume animations
+        animatedElements.forEach(element => {
+            element.style.animationPlayState = 'running';
+        });
+    }
+});
+
+// Utility function to manually trigger animations (for dynamic content)
+function triggerScrollAnimation(selector) {
+    if (window.scrollAnimator) {
+        window.scrollAnimator.animateElement(selector);
+    }
+}
+
+// Utility function to add new elements to animation system
+function addScrollAnimation(selector, type = 'alternate') {
+    if (window.scrollAnimator) {
+        window.scrollAnimator.addNewElements(selector, type);
+    }
+}
