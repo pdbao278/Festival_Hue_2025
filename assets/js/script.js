@@ -203,9 +203,12 @@ document.addEventListener('DOMContentLoaded', function () {
     artNavLinks.forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault();
+            const targetId = this.dataset.container;
+            if (targetId === currentActiveSectionId) {
+                return;
+            }
             artNavLinks.forEach(item => item.classList.remove('active'));
             this.classList.add('active');
-            const targetId = this.dataset.container;
             showSection(targetId);
 
             if (selectElement) {
