@@ -521,6 +521,9 @@ button{
     .introduction .content {
         font-size: 16px ;
     }
+    .intro{
+        font-size: 20px !important;
+    }
 }
 @media (max-width: 480px) {
     .timeline{
@@ -583,6 +586,15 @@ button{
     .menu-toggle{
         top: 10px;
     }
+
+    /* rua */
+  .intro{
+    font-size: 18px !important;
+  }
+  .event-detail-child
+  {
+    margin-bottom: 15px;
+  }
 }
 
 /* Miracle */
@@ -1499,11 +1511,11 @@ footer {
   .fot-info h2 { font-size: 18px !important; margin-bottom: 8px; }
   .fot-info h3 { font-size: 16px !important; margin-bottom: 8px; }
   .fot-info div { margin-bottom: 6px; }
-  .fot-info p { font-size: 16px; margin-left: 4px; }
-  .fot-info i { font-size: 16px;}
+  .fot-info p { font-size: 15px !important; margin-left: 4px; }
+  .fot-info i { font-size: 12px;}
   .list-social { height: 40px; gap: 6px; margin-bottom: 8px; }
   .list-social i { font-size: 22px; }
-  .fot-bottom { font-size: 16px; height: auto; padding: 8px 0; text-align: center; }
+  .fot-bottom { font-size: 15px !important; height: auto; padding: 8px 0; text-align: center; }
 }
 
 
@@ -1596,23 +1608,16 @@ footer {
   .fot-logo { width: 60px; height: 60px; }
   .fot-info h2 { font-size: 17px; }
   .fot-info h3 { font-size: 15px; }
-  .fot-info p { font-size: 12px; }
-  .fot-mid i { font-size: 15px; }
-  .fot-info i { font-size: 12px;}
-  .fot-bottom p{ font-size: 10px; }
+  .fot-info p { font-size: 14px; }
+  .fot-mid i { font-size: 18px; }
+  .fot-info i { font-size: 14px;}
+  .fot-bottom p{ font-size: 12px; }
 
   .back-to-top{
     width: 40px;
     height: 40px;
   }
-  /* rua */
-  .intro{
-    font-size: 20px;
-  }
-  .event-detail-child
-  {
-    margin-bottom: 15px;
-  }
+  
 }
 /* =============== End Responsive Design (Gộp lại) =============== */
 
