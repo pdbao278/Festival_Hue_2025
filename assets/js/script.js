@@ -168,6 +168,9 @@ document.addEventListener('DOMContentLoaded', function () {
             section.classList.remove('active');
             section.querySelectorAll('.row').forEach(row => {
                 row.classList.remove('active');
+                document.querySelectorAll('.art-card.active').forEach(card => {
+                    card.classList.remove('active');
+                });
             });
         });
 
