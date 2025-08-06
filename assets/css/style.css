@@ -1438,7 +1438,7 @@ footer {
 }
 /* ================= Responsive Design (Gộp lại) ================ */
 @media (max-width: 1280px) {
-  .container { max-width: 1000px; }
+  .container { max-width: 1280px; }
   .list-dia-diem { gap: 12px; }
   .map-info { max-width: 400px; }
   .fot-info h2{
