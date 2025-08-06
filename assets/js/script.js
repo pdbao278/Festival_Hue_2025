@@ -814,3 +814,17 @@ function addScrollAnimation(selector, type = 'alternate') {
         window.scrollAnimator.addNewElements(selector, type);
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const logoLink = document.querySelector('.logo-link');
+
+    if (logoLink) {
+        logoLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
