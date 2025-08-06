@@ -656,6 +656,9 @@ class ScrollAnimator {
 
             //section-art
             { selector: '.list-dia-diem', animation: 'fade-up' },
+
+            //footer
+            { selector: '.logo-and-social, .fot-info', animation: 'fade-up' },
         ];
 
         let leftRightCounter = 0;
