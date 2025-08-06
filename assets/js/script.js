@@ -612,12 +612,12 @@ class ScrollAnimator {
 
             /* Slide from left */
             .slide-from-left {
-                transform: translateX(-100px);
+                transform: translateX(-50px);
             }
 
             /* Slide from right */
             .slide-from-right {
-                transform: translateX(100px);
+                transform: translateX(50px);
             }
 
             /* Fade up */
