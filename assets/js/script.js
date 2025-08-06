@@ -612,12 +612,12 @@ class ScrollAnimator {
 
             /* Slide from left */
             .slide-from-left {
-                transform: translateX(-50px);
+                transform: translateX(-100px);
             }
 
             /* Slide from right */
             .slide-from-right {
-                transform: translateX(50px);
+                transform: translateX(100px);
             }
 
             /* Fade up */
@@ -651,7 +651,7 @@ class ScrollAnimator {
             { selector: '.event-contents, .timeline', animation: 'alternate' },
 
             //traditional-village
-            { selector: '.village-item, .village-item-reverse', animation: 'alternate' },
+            { selector: '.village-item, .village-item-reverse', animation: 'fade-up' },
 
             //section-food
             { selector: '.food-info, .food-grid, .food-grids', animation: 'fade-up' },
