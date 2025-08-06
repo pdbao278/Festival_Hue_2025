@@ -636,7 +636,7 @@ class ScrollAnimator {
     setupElements() {
         const animationConfig = [
             //Header-section, color-button
-            { selector: '.header-section, .color-buttons', animation: 'fade-up' },
+            { selector: '.header-section', animation: 'fade-up' },
             
             //section-2
             { selector: '.section-2', animation: 'alternate' },
