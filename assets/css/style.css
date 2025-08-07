@@ -454,7 +454,6 @@ button{
         display: none !important;
         flex-direction: column;
         width: 100%;
-        margin: 10px 0px 10px 16px;
         gap: 10px;
     }
     .nav-links.active {
